@@ -9,5 +9,5 @@ layout: default
 	<li>
 		<a href="{{ post.url }}">{{ post.title }}</a>
 	</li>
-{% endfot %}
+{% endfor %}
 </ul>
