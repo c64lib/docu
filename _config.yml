@@ -4,7 +4,7 @@ description: "A minimal, responsive, ready to use blog template, built with Jeky
 author: Maciej Małecki
 name: "maciejmalecki"
 email: "malecki.maciej@gmail.com"
-url: "https://maciejmalecki.github.com"
+url: "https://maciejmalecki.github.io"
 
 # Build settings
 baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
