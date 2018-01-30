@@ -43,3 +43,4 @@ plugins:
 #   - vendor/ruby/
 
 repository: "maciejmalecki/blog"
+username: maciejmalecki
