@@ -4,12 +4,22 @@
  <title>Monochrome | A minimal, responsive Jekyll blog theme</title>
  <link href="https://maciejmalecki.github.com/atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.com</id>
- <updated>2018-01-30T22:33:58+00:00</updated>
+ <updated>2018-01-30T22:37:05+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>New Psu For Commodore 64</title>
+   <link href="https://maciejmalecki.github.com/new-psu-for-commodore-64"/>
+   <id>https://maciejmalecki.github.com/new-psu-for-commodore-64</id>
+   <updated>2018-01-30T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put in fire because of it. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: the brick decided to...</content>
+ </entry>
 
  
 
