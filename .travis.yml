@@ -5,8 +5,7 @@ branches:
 rvm:
 - 2.4.2
 before_install:
- - gem update --system
- - gem --version
+ - echo "MOS6581"
 before_script:
 - chmod +x ./cibuild
 script: ./cibuild
