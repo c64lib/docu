@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Monochrome | A minimal, responsive Jekyll blog theme</title>
- <link href="https://maciejmalecki.github.com/atom.xml" rel="self"/>
- <id>https://maciejmalecki.github.com</id>
- <updated>2018-01-30T22:37:05+00:00</updated>
+ <link href="https://maciejmalecki.github.io/atom.xml" rel="self"/>
+ <id>https://maciejmalecki.github.io</id>
+ <updated>2018-01-30T22:43:40+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
@@ -15,8 +15,8 @@
 
  <entry>
    <title>New Psu For Commodore 64</title>
-   <link href="https://maciejmalecki.github.com/new-psu-for-commodore-64"/>
-   <id>https://maciejmalecki.github.com/new-psu-for-commodore-64</id>
+   <link href="https://maciejmalecki.github.io/new-psu-for-commodore-64"/>
+   <id>https://maciejmalecki.github.io/new-psu-for-commodore-64</id>
    <updated>2018-01-30T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put in fire because of it. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: the brick decided to...</content>
  </entry>
@@ -25,8 +25,8 @@
 
  <entry>
    <title>Welcome to Jekyll!</title>
-   <link href="https://maciejmalecki.github.com/welcome-to-jekyll"/>
-   <id>https://maciejmalecki.github.com/welcome-to-jekyll</id>
+   <link href="https://maciejmalecki.github.io/welcome-to-jekyll"/>
+   <id>https://maciejmalecki.github.io/welcome-to-jekyll</id>
    <updated>2018-01-29T13:39:08+00:00</updated>
    <content type="html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your...</content>
  </entry>
@@ -35,8 +35,8 @@
 
  <entry>
    <title>TheReviewIndex | Unbiased User Review Summaries | Monochrome</title>
-   <link href="https://maciejmalecki.github.com/thereviewindex-introduction"/>
-   <id>https://maciejmalecki.github.com/thereviewindex-introduction</id>
+   <link href="https://maciejmalecki.github.io/thereviewindex-introduction"/>
+   <id>https://maciejmalecki.github.io/thereviewindex-introduction</id>
    <updated>2017-02-18T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;The internet is a source of a humongous amount of unstructured content for all sorts of products, in the form of blogs, videos, user and expert reviews, etc. It is almost impossible for anyone to scour all of this disparate data, with contradictory opinions, and thereafter make a correct, or...</content>
  </entry>
@@ -45,8 +45,8 @@
 
  <entry>
    <title>Typography Example | Monochrome</title>
-   <link href="https://maciejmalecki.github.com/typography-example"/>
-   <id>https://maciejmalecki.github.com/typography-example</id>
+   <link href="https://maciejmalecki.github.io/typography-example"/>
+   <id>https://maciejmalecki.github.io/typography-example</id>
    <updated>2017-02-14T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/monochrome/img/img-test.png&quot; alt=&quot;Test&quot; title=&quot;Test&quot; /&gt; Lorem ipsum dolor sit amet, &lt;a href=&quot;http://www.example.com&quot;&gt;consectetur adipisicing&lt;/a&gt; elit. Id, aliquam magni et officiis nemo nihil aliquid placeat alias. Eum voluptates ducimus, nobis ex illum laboriosam quidem corrupti impedit ratione in voluptatum amet beatae facilis temporibus voluptate praesentium voluptatibus! At ab, iusto error amet eveniet...</content>
  </entry>
@@ -55,8 +55,8 @@
 
  <entry>
    <title>Code Example</title>
-   <link href="https://maciejmalecki.github.com/code-example"/>
-   <id>https://maciejmalecki.github.com/code-example</id>
+   <link href="https://maciejmalecki.github.io/code-example"/>
+   <id>https://maciejmalecki.github.io/code-example</id>
    <updated>2017-02-12T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the &lt;a href=&quot;http://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;Jekyll documentation&lt;/a&gt;. In this way the code will be included into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.highlight&lt;/code&gt; CSS class and will be highlight according to the &lt;a href=&quot;https://github.com/mojombo/tpw/blob/master/css/syntax.css&quot;&gt;syntax.scss&lt;/a&gt; file. This is the...</content>
  </entry>

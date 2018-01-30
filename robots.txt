@@ -1,1 +1,1 @@
-Sitemap: https://maciejmalecki.github.com/blog/sitemap.xml
+Sitemap: https://maciejmalecki.github.io/blog/sitemap.xml
