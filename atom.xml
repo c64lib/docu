@@ -4,7 +4,7 @@
  <title>Monochrome | A minimal, responsive Jekyll blog theme</title>
  <link href="https://maciejmalecki.github.com/atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.com</id>
- <updated>2018-01-30T22:15:44+00:00</updated>
+ <updated>2018-01-30T22:17:09+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
@@ -49,66 +49,6 @@
    <id>https://maciejmalecki.github.com/code-example</id>
    <updated>2017-02-12T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;To insert highlight code inside of a post, it’s enough to use some specific tags, has directly described into the &lt;a href=&quot;http://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;Jekyll documentation&lt;/a&gt;. In this way the code will be included into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.highlight&lt;/code&gt; CSS class and will be highlight according to the &lt;a href=&quot;https://github.com/mojombo/tpw/blob/master/css/syntax.css&quot;&gt;syntax.scss&lt;/a&gt; file. This is the...</content>
- </entry>
-
- 
-
- <entry>
-   <title>This is the eigth test post.</title>
-   <link href="https://maciejmalecki.github.com/test-post-8"/>
-   <id>https://maciejmalecki.github.com/test-post-8</id>
-   <updated>2017-02-11T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>This is the seventh test post.</title>
-   <link href="https://maciejmalecki.github.com/test-post-7"/>
-   <id>https://maciejmalecki.github.com/test-post-7</id>
-   <updated>2017-02-11T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>This is the sixth test post.</title>
-   <link href="https://maciejmalecki.github.com/test-post-6"/>
-   <id>https://maciejmalecki.github.com/test-post-6</id>
-   <updated>2017-02-11T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>This is the fifth test post</title>
-   <link href="https://maciejmalecki.github.com/test-post-5"/>
-   <id>https://maciejmalecki.github.com/test-post-5</id>
-   <updated>2017-02-11T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>This is the forth test post.</title>
-   <link href="https://maciejmalecki.github.com/test-post-4"/>
-   <id>https://maciejmalecki.github.com/test-post-4</id>
-   <updated>2017-02-11T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
- </entry>
-
- 
-
- <entry>
-   <title>This is the third test post.</title>
-   <link href="https://maciejmalecki.github.com/test-post-3"/>
-   <id>https://maciejmalecki.github.com/test-post-3</id>
-   <updated>2017-02-11T00:00:00+00:00</updated>
-   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est optio ut impedit architecto iusto tempore rem, voluptates sed magni nisi corrupti praesentium voluptatum harum expedita temporibus ipsam, odit ad distinctio! Labore cupiditate distinctio facere earum, iste! Reiciendis possimus voluptatum explicabo corporis ab. Ex adipisci laudantium mollitia vel optio deserunt...</content>
  </entry>
 
  
