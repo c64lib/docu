@@ -1,11 +1,10 @@
 # Site settings
 title: Monochrome | A minimal, responsive Jekyll blog theme
 description: "A minimal, responsive, ready to use blog template, built with Jekyll."
-url: "https://maciejmalecki.github.io/blog"
-author:
-  name: "Maciej Małecki"
-  email: "malecki.maciej@gmail.com"
-  url: "https://thereviewindex.com"
+author: Maciej Małecki
+name: "maciejmalecki"
+email: "malecki.maciej@gmail.com"
+url: "https://maciejmalecki.github.com"
 
 # Build settings
 baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
@@ -37,3 +36,7 @@ version: "1.0.0"
 custom_header: false
 custom_nav_footer: false
 reverse: false
+
+repository: "maciejmalecki/blog"
+username: maciejmalecki
+repo: blog
