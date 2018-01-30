@@ -1,12 +1,7 @@
 language: ruby
 rvm: 2.2
 install: bundle install
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: "$GITHUB_TOKEN"
-  on:
-    branch: gh-pages
+script: bundle exec rake site:deploy
 env:
   global:
     secure: kk36ZR/117nqOkFsShRNdYD27e8zHDhUmUCWRt5boemDEgezSUdmYwuwruT0eDhMjm+yZJHgxI0s+eq4xK5vvBWM+hggKWEpOIOzIAC+daz9VCb+A2+WgvN8E3CRFtqDda7yPRLXgG1GtkDL/DX7AQYcyA9u1zDCsn7MddaFlNWgOB+2ZrnZNreGnAZWQfMAEhwIrj614OHnvk8iVn3Xf9qDFRqzxib3XoXrPvjFuRMiv8zrnVfsypWK06Q2yB6tETGntFhOEMND1DnY7X1OvxS4LeFoc2zfBMzFGpO+2+xhVOPWX5XMHIbUs3mSwGJR4OVIugMErsJptJMwzO0XzDEzPgOJ0n+PvWbE0HN1LuK3bZ6NXDpGjhcOlBy75hpkxLeRKxMstpzdlcM5x+w/CH04fBE+36ndbFufGM6YU/oczIus4nAlia1HEogvbyBpeRRP8j56627ubdCjsXKhFY73g1NPrKwZ5OI1L70etbBE6ZduNUTOGw2fRx5ESKen53h6+ddO/o4r8cIVQBlbWN0hcmatTaf6MrAsLRO5TkOF7OaDL8BSCmmm8CpCeVy9F7VO25t4PCG9EvEAfSj4B1Cq2ph+YDGRJYORFFIlkNSlcBaRh6CZeCFGg0y9p91xWcpnoTY0tEQfsv7jJVEiiLJh8bvj+fe2KLsbswVeVrI=
