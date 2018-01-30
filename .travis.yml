@@ -1,12 +1,9 @@
 language: ruby
-branches:
-    only:
-     - master
-rvm:
-- 2.4.2
-before_install:
- - echo "MOS6581"
-before_script:
-- chmod +x ./cibuild
-script: ./cibuild
-sudo: false
+rvm: 2.2
+install: bundle install
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+        branch: gh-pages
