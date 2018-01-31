@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://maciejmalecki.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maciejmalecki.github.io/blog/" rel="alternate" type="text/html" /><updated>2018-01-31T15:00:06+00:00</updated><id>https://maciejmalecki.github.io/blog/</id><title type="html">()=&amp;gt;{} | Void’s blog</title><subtitle>t.b.d.</subtitle><author><name>Maciej Małecki</name></author><entry><title type="html">New PSU for Commodore 64/128</title><link href="https://maciejmalecki.github.io/blog/new-psu-for-c64" rel="alternate" type="text/html" title="New PSU for Commodore 64/128" /><published>2018-01-30T00:00:00+00:00</published><updated>2018-01-30T00:00:00+00:00</updated><id>https://maciejmalecki.github.io/blog/new-psu-for-c64</id><content type="html" xml:base="https://maciejmalecki.github.io/blog/new-psu-for-c64">&lt;p&gt;Today I would like to&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://maciejmalecki.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maciejmalecki.github.io/blog/" rel="alternate" type="text/html" /><updated>2018-01-31T15:11:33+00:00</updated><id>https://maciejmalecki.github.io/blog/</id><title type="html">()=&amp;gt;{} | Void’s blog</title><subtitle>t.b.d.</subtitle><author><name>Maciej Małecki</name></author><entry><title type="html">New PSU for Commodore 64/128</title><link href="https://maciejmalecki.github.io/blog/new-psu-for-c64" rel="alternate" type="text/html" title="New PSU for Commodore 64/128" /><published>2018-01-30T00:00:00+00:00</published><updated>2018-01-30T00:00:00+00:00</updated><id>https://maciejmalecki.github.io/blog/new-psu-for-c64</id><content type="html" xml:base="https://maciejmalecki.github.io/blog/new-psu-for-c64">&lt;p&gt;Today I would like to&lt;/p&gt;
 
 &lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
@@ -56,7 +56,7 @@
 
 &lt;p&gt;I have also used this PSU with C64 (Assy 250407) and 1541 “toaster”. With this version more chips are using 9VAC line. There was apparently no difference in PSU behavior.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://maciejmalecki.github.io/blog/img/psu_rs/C64-breadbox.jpg&quot; alt=&quot;Breadbin with toaster&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;https://maciejmalecki.github.io/blog/img/psu-rs/C64-breadbin.jpg&quot; alt=&quot;Breadbin with toaster&quot; /&gt;
 &lt;em&gt;C64 Breadbin and 1541 Toaster&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Last set I have assembled for this test was C64C with long board connected with 1541 resembling “C” model.&lt;/p&gt;
