@@ -134,16 +134,40 @@
 	<time datetime="2018-01-30T00:00:00+00:00" class="by-line">30 Jan 2018</time>
 	<div class="content">
 
-		<p>h1. Introduction
-Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put in fire because of it. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore its spec and generate voltage that exceeds its nominal 5VDC thus frying most of precious chips.</p>
+		<p>Today I would like to</p>
 
-<p>Original PSU is not easy to replace. Commodore decided that C64 must be powered with two types of voltages: 9VAC that is then rectified and regulated by circuit located inside computer and 5VDC that is rectified and regulated by circuit iside power brick and is used <em>directly</em> to power most of C64 chips.</p>
+<h1 id="introduction">Introduction</h1>
+
+<p>Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put in fire because of it. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore its spec and generate voltage that exceeds its nominal 5VDC thus frying most of precious chips.</p>
+
+<p>Original PSU is not easy to replace. Commodore decided that C64 must be powered with two types of voltages: 9VAC that is then rectified and regulated by circuit located inside computer and 5VDC that is rectified and regulated by circuit iside power brick and is used <em>directly</em> to power most of C64 chips. This second power line is actually critical, because any deviation from pretty narrow voltage range can either cause unstable operation or damage certain chips (or even all of them). Regulation circuit located inside brick prooves to do this devastating job very well. For even more exciting details just check <a href="https://www.c64-wiki.com/wiki/Power_Supply">this</a> excellent source.</p>
+
+<p><img src="https://maciejmalecki.github.io/blog/img/psu-rs/psu-comparison.jpg" alt="Comparison with original units" title="Comparison with original units" />
+<em>Various units, from left: Ismet supply for breadbins, Ismet supply for early C64C, Dee Van unit for short boarded C64, brand new PSU replacement by <a href="mailto:raf@c64power.com">Rafał Szyja</a></em></p>
+
+<p>I wouldn’t exaggerate if I say that using the same PSU for more than 30 years is like playing Russian Roulette. We definitely needs some…</p>
+
+<h1 id="alternatives">…alternatives</h1>
+
+<p>There are plenty of them available, unfortunatelly most of them are DIY, and not everybody have sufficient skills. And if you do something wrong, you may kill a patient. Too bad.</p>
+
+<h2 id="power-savers">Power savers</h2>
+
+<h2 id="replace-linear-regulator">Replace linear regulator</h2>
+
+<h2 id="bundle-two-market-adapters">Bundle two market adapters</h2>
+
+<h2 id="buy-new-working-unit">Buy new working unit</h2>
+
+<h1 id="test-of-new-psu-replacement">Test of new PSU replacement</h1>
 
 <p><img src="https://maciejmalecki.github.io/blog/img/psu-rs/psu-overview.jpg" alt="PSU from Rafał Szyja" title="Overview of PSU" />
 <em>Light colors of PSU fits well with C64C beige case</em></p>
 
-<p><img src="https://maciejmalecki.github.io/blog/img/psu-rs/psu-comparison.jpg" alt="Comparison with original units" title="Comparison with original units" />
-<em>New PSU is of the same size as original units</em></p>
+<p>The unit is not particularily small. In fact it is bigger than any of original PSUs that are in my possesion (refer first figure). This is partially because manufacturer decides not to produce dedicated case but to use generic one that is available on the market. Most importantly, we have two power supply units here in fact, bundled in one package. Bigger case also improves cooling, which was actually a weak point of original PSU. Here in fact, I haven’t observed any noticeable heat production, which is very promising.</p>
+
+<h1 id="summary">Summary</h1>
+
 
 		
 	</div>
