@@ -28,13 +28,6 @@ defaults:
 gems:
   - jekyll-paginate
   - jekyll-sitemap
-plugins:
-  - jekyll-analytics
-
-jekyll-analytics:
-  GoogleAnalytics:
-     id: UA-113535243-1
-     anonymizeIp: false
 
 # Custom variables
 version: "1.0.0"
