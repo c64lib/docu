@@ -48,7 +48,7 @@ The namespace feature is great, as it allows to group labels, macros and functio
 	    .return xPos + TEXT_SCREEN_WIDTH * yPos
 	  }
 
-	  .macro @configureTextMemory(video, charSet) {
+	  .macro configureTextMemory(video, charSet) {
 	    lda #getTextMemory(video, charSet)
 	    sta MEMORY_CONTROL
 	  }
