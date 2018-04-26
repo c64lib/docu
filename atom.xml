@@ -4,12 +4,22 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://maciejmalecki.github.io/atom.xml" rel="self"/>
  <id>https://maciejmalecki.github.io</id>
- <updated>2018-04-24T15:01:13+00:00</updated>
+ <updated>2018-04-26T06:24:22+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>Writing and using libraries in KickAssembler</title>
+   <link href="https://maciejmalecki.github.io/assembler-libraries"/>
+   <id>https://maciejmalecki.github.io/assembler-libraries</id>
+   <updated>2018-04-26T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
+ </entry>
 
  
 
