@@ -240,7 +240,7 @@ source <(curl -SLs https://raw.githubusercontent.com/c64lib/travis-ci/master/ins
 ```
 It downloads ```install.sh``` script from repo and sources it (it means it will be immediately executed inside Travis CI environment). What this script does, it download KickAssembler binaries and provides your scripting environment with two further commands: ```cpm`` and ```ka```.
 
-The ```ka``` command is just a wrapper for KickAssembler (who wants to type ```java -jar KickAss.jar ...?) - you now just type ```ka``` and pass all valid KickAssembler parameters to it.
+The ```ka``` command is just a wrapper for KickAssembler (who wants to type ```java -jar KickAss.jar``` ...?) - you now just type ```ka``` and pass all valid KickAssembler parameters to it.
 
 The ```cpm``` command is a very simple tool for managing dependencies. It actually very limited - what it does now, it download specified library from GitHub, unzip it and places in hidden ```.cpm_modules``` directory (JavaScript and NodeJS people already know what is going on;-). Actually it is so limited (I wrote it and tested in 15 minutes), that you must provide it with library name manually, see:
 
