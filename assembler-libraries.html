@@ -390,7 +390,7 @@ initialize: {
 </code></pre></div></div>
 <p>It downloads <code class="highlighter-rouge">install.sh</code> script from repo and sources it (it means it will be immediately executed inside Travis CI environment). What this script does, it download KickAssembler binaries and provides your scripting environment with two further commands: <code class="highlighter-rouge">cpm`` and</code>ka```.</p>
 
-<p>The <code class="highlighter-rouge">ka</code> command is just a wrapper for KickAssembler (who wants to type <code class="highlighter-rouge">java -jar KickAss.jar ...?) - you now just type</code>ka``` and pass all valid KickAssembler parameters to it.</p>
+<p>The <code class="highlighter-rouge">ka</code> command is just a wrapper for KickAssembler (who wants to type <code class="highlighter-rouge">java -jar KickAss.jar</code> …?) - you now just type <code class="highlighter-rouge">ka</code> and pass all valid KickAssembler parameters to it.</p>
 
 <p>The <code class="highlighter-rouge">cpm</code> command is a very simple tool for managing dependencies. It actually very limited - what it does now, it download specified library from GitHub, unzip it and places in hidden <code class="highlighter-rouge">.cpm_modules</code> directory (JavaScript and NodeJS people already know what is going on;-). Actually it is so limited (I wrote it and tested in 15 minutes), that you must provide it with library name manually, see:</p>
 
