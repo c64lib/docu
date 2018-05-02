@@ -388,7 +388,7 @@ initialize: {
 <p>First important line is this one:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> &lt;<span class="o">(</span>curl <span class="nt">-SLs</span> https://raw.githubusercontent.com/c64lib/travis-ci/master/install.sh<span class="o">)</span>
 </code></pre></div></div>
-<p>It downloads <code class="highlighter-rouge">install.sh</code> script from repo and sources it (it means it will be immediately executed inside Travis CI environment). What this script does, it download KickAssembler binaries and provides your scripting environment with two further commands: <code class="highlighter-rouge">cpm`` and</code>ka```.</p>
+<p>It downloads <code class="highlighter-rouge">install.sh</code> script from repo and sources it (it means it will be immediately executed inside Travis CI environment). What this script does, it download KickAssembler binaries and provides your scripting environment with two further commands: <code class="highlighter-rouge">cpm</code> and <code class="highlighter-rouge">ka</code>.</p>
 
 <p>The <code class="highlighter-rouge">ka</code> command is just a wrapper for KickAssembler (who wants to type <code class="highlighter-rouge">java -jar KickAss.jar</code> …?) - you now just type <code class="highlighter-rouge">ka</code> and pass all valid KickAssembler parameters to it.</p>
 
