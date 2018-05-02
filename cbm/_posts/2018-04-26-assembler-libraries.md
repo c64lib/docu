@@ -238,7 +238,7 @@ First important line is this one:
 ```bash
 source <(curl -SLs https://raw.githubusercontent.com/c64lib/travis-ci/master/install.sh)
 ```
-It downloads ```install.sh``` script from repo and sources it (it means it will be immediately executed inside Travis CI environment). What this script does, it download KickAssembler binaries and provides your scripting environment with two further commands: ```cpm`` and ```ka```.
+It downloads ```install.sh``` script from repo and sources it (it means it will be immediately executed inside Travis CI environment). What this script does, it download KickAssembler binaries and provides your scripting environment with two further commands: ```cpm``` and ```ka```.
 
 The ```ka``` command is just a wrapper for KickAssembler (who wants to type ```java -jar KickAss.jar``` ...?) - you now just type ```ka``` and pass all valid KickAssembler parameters to it.
 
