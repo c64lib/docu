@@ -8,7 +8,7 @@ One of the greatest feature of VIC-II is that it can a source of IRQ interrupts.
 
 This last feature is especially useful because it allows to do some tricks such us screen splitting (so that you can have two or more screen areas displaying different screen modes or scrolled independently). You can play with global color registers to get more colorful display, you can play with sprite registers to show more than 8 of them at the same time. Actually raster IRQ is so important in C64 world, that it is even used when playing background music.
 
-Although having raster interrupt is substantially better than not having it (owners of VIC-20 or even PC can say something about it), but still there are platforms, that have much better and more convienient support (here owners of Amiga or 8-bit Atari can say something).
+Although having raster interrupt is definitely better than not having it (owners of VIC-20 or even PC can say something about it), but still there are platforms, that have much better and more convienient support (Amiga, but also a8i can easily mix graphic modes with display list).
 
 Let's look at following example:
 
@@ -61,7 +61,7 @@ One of VIC-II shortcomings is the fact, that you can specify only single raster 
 
 Second shortcomming is visible on the screenshot above: we clearly see the moment when background color is changed and it's almost in the middle of the screen. Even worse: positions of these ugly "steps" are not stable, but they tend to jitter forth and back. I will explain this in details in my next article, today we will just believe that there are ways to compensate this, however not very simple. One good example is described in [2].
 
-Both Amiga and 8-bit Atari have dedicated processor that executed special program called display list: it frees programmer with doing all ugly things by himself(herself) and, what's most important, it is *stable*. The question is whether we can emulate such feature with Commodore 64.
+Both Amiga and 8-bit Atari have dedicated processor that executed special program called display list: it frees programmer with doing all ugly things by himself(herself) and, what's most important, it is *stable* (well, that's not always the case in Atari). The question is whether we can emulate such feature with Commodore 64.
 
 ## Better way - use copper64 library
 I wrote this little library to make our lives easier. It is available on [github](https://github.com/c64lib/copper64) and can be freely used as it is open source. When designing it, I had two goals:
