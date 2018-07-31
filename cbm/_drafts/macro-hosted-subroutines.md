@@ -18,3 +18,5 @@ In 6502 machine code there are at least three commonly used methods for passing 
 3.   Using stack.
 
 Using CPU registers is the simplest possible way of communication. Assuming that registers are used wisely, we may get CPU registers already properly loaded with values which speeds up execution and can be essential in some time critical cases. There is however one downside of this method directly connected with very simplistic design of 6502: there are only 3 registers that can be easily used (`A`, `X` and `Y`) each only 1 byte in size - not much indeed.
+
+Fixed memory location for exchanging parameters is fine unless you write libraries of code.
