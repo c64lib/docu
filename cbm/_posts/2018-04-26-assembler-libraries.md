@@ -2,6 +2,7 @@
 title: Writing and using libraries in KickAssembler
 description: Here I explain how to write, use and build under travis-ci reusable libraries written in KickAssembler.
 layout: post
+categories: cbm asm
 ---
 It's a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do not want to complain, I fully understand that productivity is a key and live is hard.
 

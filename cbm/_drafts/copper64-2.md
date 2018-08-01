@@ -3,6 +3,7 @@ title: Copper64 - the library, part 2
 description: Here I explain, how you can make your raster IRQ handling code simpler and cleaner.
 layout: post
 post-url: copper64-2
+categories: cbm asm c64lib
 --- 
 ## Prepare yourself - environment setup
 Before we start, get familiar with my previous [post][1], because all code I'm presenting here is available on [github](https://github.com/c64lib) in form of KickAssembler libraries. You need also [KickAssembler](http://www.theweb.dk/KickAssembler/Main.html#frontpage), a [GIT client](https://git-scm.com/downloads) and some IDE (not required), such as [Relaunch64](http://www.popelganda.de/relaunch64.html).

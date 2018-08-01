@@ -3,6 +3,7 @@ title: Copper64 - the library, part 1
 description: Here I explain, how you can make your raster IRQ handling code simpler and cleaner.
 layout: post
 post-url: copper64-1
+categories: cbm asm c64lib
 ---
 One of the greatest feature of VIC-II is that it can a source of IRQ interrupts. VIC can generate interrupt on sprite collision, lightgun shots and most importantly on specified raster line. 
 
