@@ -94,9 +94,9 @@ As you can see, with this approach we can use macros as hosts for our subroutine
 
 Using stack
 -----------
-Stack in MOS 6502 is just a regular place in memory. In case of this particular microprocessor model, the stack is hardwired into memory page 1. CPU has three additional components that handles stack in convenient and fast way: it is stack pointer register (SP) and families of push and pull instructions that can transfer data from and to CPU registers. When we use stack for subroutine parameters, it is particularily convenient, because we don't need to care which exact memory cells should we use for this purpose. Just free place on stack will be used. Moreover, this method of communication supports nesting of subroutine calls, and with particularily clever design it may even handle recursive calls.
+Stack in MOS 6502 is just a regular place in memory. CPU has three additional components that handles stack in convenient and fast way: it is stack pointer register (SP) and families of push and pull instructions that can transfer data from and to CPU registers. When we use stack for subroutine parameters, it is particularily convenient, because we don't need to care which exact memory cells should we use for this purpose. Just free place on stack will be used. Moreover, this method of communication supports nesting of subroutine calls, and with particularily clever design it may even handle recursive calls.
 
-Lets consider add8Mem subroutine hosted by a macro (as above) but using stack as communication method. First we have to deal with return address. It is very important to preserve it, because without correctly defined return address our CPU will get jammed as soon as ``RTS`` is called.
+Lets consider ``add8`` subroutine hosted by a macro (similar to ``add8Mem`` from above) but using stack as communication method. First we have to deal with return address. It is very important to preserve it, because without correctly defined return address our CPU will get jammed as soon as ``RTS`` is called.
 
 Return address is pushed to the stack once ``JSR`` is called and taken back when ``RTS`` is called. We are going to push our parameters to the stack just before ``JSR``, so at the beginning of our subroutine we must pull this address and store somewhere else before accessing our parameters.
 
@@ -173,7 +173,7 @@ It is actually plenty of coding. We can simplify this with bunch of KickAssemble
         sta placeholderPtr
     }
 
-With these macros we can code our macro hosted subroutine in simpler manner:
+With these macros we can code our macro hosted subroutine in simpler manner (please appreciate the beauty of this self modifying code):
 
     .macro add8() {
         invokeStackBegin(returnPtr)
@@ -207,6 +207,10 @@ and calling code can look like this:
         add8()
 
 Helper macros for implementing stack based subroutines are available as KickAssembler library as a part of c64lib. You must include ``invoke.asm`` from common repository (https://github.com/c64lib/common).
+
+Summary
+-------
+We just saw how subroutines can be effectively implemented as part of libraries. With this approach they can be easily installed into target code and reused by many programs. We've learnt also how can we pass parameters to the subroutines. With a little help from self modifying code and some macros from c64lib common library we can write compact code that communicates via stack. I will post some more complex examples in subsequent posts, including indirect subroutine parameters.
 
 ## References
 * \[1\] [assembler-libraries][1]
