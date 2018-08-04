@@ -84,7 +84,7 @@ Assuming that we have encapsulated this macro in library, namely ``math.asm``, w
                           // parameter placeholders
 
 Here we did several things:
-- We have installed our subroutine using librarian macro under address of choice (here indicated by ``add8Mem`` address (I'm going to use label name that follows macro name, but it does not need to go like this).
+- We have installed our subroutine using library macro under address of choice (here indicated by ``add8Mem`` address (I'm going to use label name that follows macro name, but it does not need to go like this).
 - We have configured this subroutine to use addresses of choice for parameter placeholders (we did it using macro parameters).
 - We can use subroutine with simple ``JSR``, all we need to do is to load placeholders with data first.
 
