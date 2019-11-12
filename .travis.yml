@@ -1,6 +1,9 @@
 language: ruby
 rvm: 2.6
 install: bundle install
+before-script:
+  - git config --global user.email "malecki.maciej@gmail.com"
+  - git config --global user.name "Maciej Malecki"
 script: JEKYLL_ENV=production bundle exec rake site:deploy
 env:
   global:
