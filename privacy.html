@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>404 - Page not found</title>
+	<title>Privacy</title>
   <meta name="description" content="t.b.d.">
 
 	<!-- CSS & fonts -->
@@ -148,9 +148,38 @@
 		  
 		<main>
 
-			<h1 id="404---page-not-found">404 - Page not found</h1>
-<p>Sorry, we couldn’t find the requested URL. You can try again by going <a href="/blog">back to the homepage</a>.</p>
+			<article id="page">
+	
+  <h1>Privacy policy</h1>
+<h2>How we process your data</h2>
+<p>
+This website is powered by Jekyll and is hosted on GitHub/GitHub Pages. Jekyll is
+not collecting or processing user data in any form. GitHub however, as any other hosting
+company, can have full insight in visitor data, like connecting IP addresses, visited pages, etc.
+Note that Github is not known to actively profile visitors. By using a VPN you can (try to) prevent this.
+</p>
+<h3>Google Analytics</h3>
+<p>
+This website uses Google Analytics. This happens only if you accept third party cookies.
+I have configured Google Analytics so that IP addresses are anonymized.
+</p>
+<p>
+  Use the following option to grant or revoke collecting data and using cookies.
+</p>
+<p>
+  <input type="checkbox" id="enableGA"> Enable Google Analytics
+</p>
+<script>
+  var useCookies = localStorage.getItem('useCookies');
+  document.getElementById('enableGA').checked = (useCookies === 'true');
+  var checkbox = document.getElementById('enableGA');
+  checkbox.addEventListener('change', function() {
+      localStorage.setItem('useCookies', this.checked);
+  });
+</script>
 
+
+</article>
 
 	  </main>
 		
