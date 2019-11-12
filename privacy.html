@@ -1,0 +1,31 @@
+---
+layout: page
+title: Privacy
+---
+<h1>Privacy policy</h1>
+<h2>How we process your data</h2>
+<p>
+This website is powered by Jekyll and is hosted on GitHub/GitHub Pages. Jekyll is
+not collecting or processing user data in any form. GitHub however, as any other hosting
+company, can have full insight in visitor data, like connecting IP addresses, visited pages, etc.
+Note that Github is not known to actively profile visitors. By using a VPN you can (try to) prevent this.
+</p>
+<h3>Google Analytics</h3>
+<p>
+This website uses Google Analytics. This happens only if you accept third party cookies.
+I have configured Google Analytics so that IP addresses are anonymized.
+</p>
+<p>
+  Use the following option to grant or revoke collecting data and using cookies.
+</p>
+<p>
+  <input type="checkbox" id="enableGA"> Enable Google Analytics
+</p>
+<script>
+  var useCookies = localStorage.getItem('useCookies');
+  document.getElementById('enableGA').checked = (useCookies === 'true');
+  var checkbox = document.getElementById('enableGA');
+  checkbox.addEventListener('change', function() {
+      localStorage.setItem('useCookies', this.checked);
+  });
+</script>
