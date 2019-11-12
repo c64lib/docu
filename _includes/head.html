@@ -2,7 +2,7 @@
 	{% if jekyll.environment == 'production' %}
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113535243-1"></script>
 	<script>
-		var useCookies = localStorage.getItem('useCookies');
+		var useCookies = (localStorage.getItem('useCookies') === 'true');
 		if (useCookies) {
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
