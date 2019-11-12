@@ -4,3 +4,17 @@
 
 //Import
 @import "base", "mixin", "typography", "layout", "syntax.scss", "custom.scss";
+
+div#gdpr {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1em 1em;
+  padding: 1em;
+  background: whitesmoke;
+  box-shadow: 5px 5px 2px lightgray;
+  text-align: center;
+  p {
+    margin: 0.1em;
+  }
+}

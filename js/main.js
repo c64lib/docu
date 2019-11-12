@@ -11,7 +11,7 @@ function toggle() {
 
 	  var button = document.getElementById("menu");
 	  var site = document.getElementById("wrap");
-	  
+
 	  if (nav.className == "menu-open" || nav.className == "menu-open-left") {
 	  	  nav.className = "";
 	  	  button.className = "";
@@ -39,3 +39,12 @@ function menuClick() {
 }
 
 menuClick();
+
+var useCookies = localStorage.getItem('useCookies');
+document.getElementById('gdprClose').addEventListener('click', function() {
+	document.getElementById('gdpr').style.display = 'none';
+	localStorage.setItem('useCookies', 'true');
+});
+if (!useCookies) {
+	document.getElementById('gdpr').style.display = 'block';
+}
