@@ -5,7 +5,7 @@ before_script:
 - git config --global user.email "malecki.maciej@gmail.com"
 - git config --global user.name "Maciej Malecki"
 - git remote rm origin
-- git remote add origin https://maciejmalecki:${GH_TOKEN}@github.com/maciejmalecki/blog.git
+- git remote add origin https://maciejmalecki:${GH_TOKEN}@github.com/c64lib/blog.git
 script: JEKYLL_ENV=production bundle exec rake site:deploy
 env:
   global:
