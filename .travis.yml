@@ -2,11 +2,11 @@ language: ruby
 rvm: 2.6
 install: bundle install
 before_script:
-  - git config --global user.email "malecki.maciej@gmail.com"
-  - git config --global user.name "Maciej Malecki"
-  - git remote rm origin
-  - git remote add origin https://maciejmalecki:${GH_TOKEN}@github.com/maciejmalecki/blog.git
+- git config --global user.email "malecki.maciej@gmail.com"
+- git config --global user.name "Maciej Malecki"
+- git remote rm origin
+- git remote add origin https://maciejmalecki:${GH_TOKEN}@github.com/maciejmalecki/blog.git
 script: JEKYLL_ENV=production bundle exec rake site:deploy
 env:
   global:
-    secure: mJBS4ZQ5nyT2gi1/cNzqBFJWS8WE/fE14oVKe9h4r12OCNQtsHoJmey+5iah86ga5ebluRcyihPlyIbkjVBr5nL7rOoWMvUOQjGBS7RvANY8eERjhpUSuDFoZBlyC6t5XnHwVH2/usKXa7diJVAzqIKFvqkLkZhiooQFsWrpZioZQcQkQUDNs180PqxjPH0HqcbVnL1NaGsgTHTR/SmuVAbyNxsx/8Vr6ErKLF9TPN+sD7HX/qP4TPj+/lOvxfbB/TpOy5DS5tbdhocHr4YVxZetug/c0akmziSKgma3pCmh3ZrYGNGDtmFQmb90/sLdjnW2GeEUd5UItAdWYBJQjo+G3Mpl8uOCfGqupvN5dmSRYwfOj+IGQ5Qf+XWnPx/c+JWS7qttfItTBbJ/FJqcpkttPM6rtH2YMlAAeJmBVB9Jm+u62duVUv2oj/GYsPiauZ1OG59SWhyguqEsQHU5AnYzAhllbmhpho+A1NBOBE24BMKRXdiDPmlwy6XaWGshyCeDDMnQXNGHNt4mWEbMoHR6iKafmM4J6kCn5vW7ABHCzRRVZC+MI1V+/RkvJskSA4ZSnfHRLyxXWshUWS8jcm98gQDgRJkcwlfoZRWT3XiVuMdvTdGU/5hTLbvn7OngBz5dft2G4GcZ0DPAhmAoObjWhbGL01XgXlV5EvgfmZ4=
+    secure: V7/UHww4lksnIyHuv7owNjznX3BMGwC4fpBSDGzRPwXS3wG0d91JbtMPA1tpvb/r/Xd4Jrf+ubwMhQEOpPkAfQj7C2d+0oF7F1xs8jgwOXsCp0f2z771nAJ0Jf4PPvpusNB+Ha9bo0VHTiSZ6dwZJXDBdClBt394/0JpshkNsSjTirMdPzeOT1pw7gIBsjzlppsZl0uTGtJcM6v7KmuB7OnnvnuwgkEe8NwMvmisEoNcs7yRy1ObpLLxdia7pwm0nq36u+nwgaDkDDTbUoMDbsDKv4S50jGhxsw1rENzd0mGKbgejK86XBTb1oy2IDFiSUVbyHZy8Mg33WmN6fg0UUqqeC0TYthdGkfLc+/I7gPxrmHHQ95x5bXKlEElVAaY7tXguZOJcRXGrqcuLMgfs3ZKFtO4nCdHg9qOqymez/7MbYwngUmcpg85VwEMrcecaOvuWfBnFqKX/kjlBI09Y8yZpI0ZrBvDKR3aRh2UjEX2cvepYVL1mXFuF/nmiY9lTI2T8FEhlHX+qBGjg6shfiQMJlWT9XPaiwmZKPOSKfJQvv6DLdOWYpn1WQQm7Q1DQkGZFsqnMsMlPSDZ8Im7qUs/Mw1jbrFCQc7LALassWgmfBIbwIV7X4GwGEqPAa4HQI1Ll5Y8Y3wEHi07HrTsx+9lGGGiklm+H8mqybrBT7Q=
