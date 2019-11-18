@@ -44,14 +44,14 @@
 	  	<!-- Navigation -->
 	  	<nav id="nav">
 	<div id="nav-list">
-		<a href="/blog/">Home</a>
+		<a href="/blog//">Home</a>
 
 		<!-- Nav pages -->
 	  
 	    
 	  
 	    
-	      <a href="/blog/about" title="About">About</a>
+	      <a href="/blog//about" title="About">About</a>
 	    
 	  
 	    
@@ -61,7 +61,7 @@
 	    
 	  
 	    
-	      <a href="/blog/privacy" title="Privacy">Privacy</a>
+	      <a href="/blog//privacy" title="Privacy">Privacy</a>
 	    
 	  
 	    
@@ -101,7 +101,7 @@
         <header id="header" class="parent justify-spaceBetween">
   <div class="inner w100 relative">
     <span class="f-left">  
-      <a href="/blog/">
+      <a href="/blog//">
           <h1><code>()=>{}</code></h1>
       </a>
     </span>
@@ -111,7 +111,7 @@
 	      
 	    
 	      
-	        <a href="/blog/about" title="About">About</a>
+	        <a href="/blog//about" title="About">About</a>
 	      
 	    
 	      
@@ -121,7 +121,7 @@
 	      
 	    
 	      
-	        <a href="/blog/privacy" title="Privacy">Privacy</a>
+	        <a href="/blog//privacy" title="Privacy">Privacy</a>
 	      
 	    
 	      
@@ -160,7 +160,7 @@
 
 <p>Original PSU is not easy to replace. Commodore decided that C64 must be powered with two types of voltages: 9VAC that is then rectified and regulated by circuit located inside computer and 5VDC that is rectified and regulated by circuit located inside power brick and is used <em>directly</em> to power most of C64 chips. This second power line is actually critical, because any deviation from pretty narrow voltage range can either cause unstable operation or damage certain chips (or even all of them). Regulation circuit located inside brick proves to do this devastating job very well. For even more exciting details just check <a href="https://www.c64-wiki.com/wiki/Power_Supply">this</a> excellent source.</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/psu-rs/psu-comparison.jpg" alt="Comparison with original units" title="Comparison with original units" />
+<p><img src="https://c64lib.github.io/blog/cbm/img/psu-rs/psu-comparison.jpg" alt="Comparison with original units" title="Comparison with original units" />
 <em>Various units, from left: Ismet supply (“breadbin”), Ismet supply (early C64C), Dee Van unit (C64 short board) and a brand new PSU replacement by <a href="mailto:raf@c64power.com">Rafał Szyja</a></em></p>
 
 <p>I wouldn’t exaggerate if I say that using the same PSU for more than 30 years is like playing Russian Roulette. We definitely needs some…</p>
@@ -183,7 +183,7 @@
 
 <p>This is pretty easy DIY fix that someone suggested to me in Facebook discussion: if you’re lucky enough to disassemble your original PSU, you can replace linear regulator with switching regulator such as 5V UBEC, commonly used to power electronics onboard of RC models. Original linear voltage regulator seems to prone to failures which lead to excees voltages, switching regulators should be much more robust.</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/psu-rs/ismet-ubec.jpg" alt="Ismet refurbished with UBEC regulator" title="Installing UBEC" />
+<p><img src="https://c64lib.github.io/blog/cbm/img/psu-rs/ismet-ubec.jpg" alt="Ismet refurbished with UBEC regulator" title="Installing UBEC" />
 <em>Old type of Ismet PSU and voltage regulator replacement</em></p>
 
 <p>This kind of solution may be problematic as not every type of PSU can be easily disassembled. “Brick” units (Dee Van) cannot, because they are filled with epoxy. Old Ismet units can be disassembled however, as they are also partially filled, it may be not easy. New Ismet units (I don’t have any in my collection) are fully repairable.</p>
@@ -202,20 +202,20 @@
 
 <p>Mainstream producers do not provide replacement units - no surprise here. We must rely on enthusiasts, as usuall. The unit I’m going to describe here has Polish origins. It has been designed and produced by <a href="mailto:raf@c64power.com">Rafał Szyja</a> from <a href="http://c64power.com">C64Power.com</a>. I’ve ordered it and got a package shortly after. Once the box is opened, I found nice looking “brick” in light grey color bundled with white cabling. Unfortunately the DIN plug is black but this is just a minor issue. All my cabling is black anyway…</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/psu-rs/psu-overview.jpg" alt="PSU from Rafał Szyja" title="Overview of PSU" /></p>
+<p><img src="https://c64lib.github.io/blog/cbm/img/psu-rs/psu-overview.jpg" alt="PSU from Rafał Szyja" title="Overview of PSU" /></p>
 
 <p>The unit is not particularily small. In fact it is bigger than any of original PSUs that are in my possesion (refer the first figure). Rafał decided not to produce dedicated case but to use generic one that is available on the market. Most importantly, we have two power supply units here in fact, bundled in one package. Bigger case also improves cooling (that was actually a weak point of original PSU). Here in fact, I haven’t observed any noticeable heat production, which is very promising.</p>
 
 <p>I decided to use all my functioning equipment (see pictures) for testing. Because I don’t have appropriate adapter (square power plug), I haven’t tested how PSU cooperates with my flat C128 - for this you have to wait a little bit more. I used this occassion as an excuse to “de-dust” all of my disk drives and use them as parts of testing sets. Because Rafał claims we can draw up to 3A from his supply, I also included my brand new 1541 Ultimate cartridge. For Ultimate II+ do not use auxiliary power supply, so the PSU must provide whole power.</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/psu-rs/testing-short-board.jpg" alt="Testing sets 1" />
+<p><img src="https://c64lib.github.io/blog/cbm/img/psu-rs/testing-short-board.jpg" alt="Testing sets 1" />
 <em>My short-boarded C64C was used both with 1541 Ultimate II+ (I also launched 16MB REU demos) and original 1541II.</em></p>
 
 <p>C64C and Ultimate is the combination I use most of the time. I have run this set for more than a month now and noticed no instabilities or other reliability problems. The PSU runs cool and silent. After two hours of operation, temperature of PSU (measured near ventilation holes) have risen from 20°C to 27°C, not even close to capabilities of original unit, that gets really hot after just 30 minutes of operation.</p>
 
 <p>Next, I have replaced 1541U with real 1541II drive. I deliberately left PSU on the desk, lying nearby floppy drive so see whether it produces any significant interference that may influence the drive. This time I have also no problems - both C64 and 1541II run stable and PSU stayed cool, unlike my original power supply I use for 1541 disk drive (I have also modern replacement for this one, must test it next time - but I don’t even remember who sold me this one).</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/psu-rs/testing-long-board.jpg" alt="Testing sets 2" />
+<p><img src="https://c64lib.github.io/blog/cbm/img/psu-rs/testing-long-board.jpg" alt="Testing sets 2" />
 <em>My older C64C model with long board together plus 1541C and my C64 “breadbin” with 1541 disk drive.</em></p>
 
 <p>I have also used this PSU with C64 (Assy 250407) and 1541 “toaster”. With this version more chips are using 9VAC line. There was apparently no difference in PSU behavior.</p>

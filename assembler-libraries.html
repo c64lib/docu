@@ -44,14 +44,14 @@
 	  	<!-- Navigation -->
 	  	<nav id="nav">
 	<div id="nav-list">
-		<a href="/blog/">Home</a>
+		<a href="/blog//">Home</a>
 
 		<!-- Nav pages -->
 	  
 	    
 	  
 	    
-	      <a href="/blog/about" title="About">About</a>
+	      <a href="/blog//about" title="About">About</a>
 	    
 	  
 	    
@@ -61,7 +61,7 @@
 	    
 	  
 	    
-	      <a href="/blog/privacy" title="Privacy">Privacy</a>
+	      <a href="/blog//privacy" title="Privacy">Privacy</a>
 	    
 	  
 	    
@@ -101,7 +101,7 @@
         <header id="header" class="parent justify-spaceBetween">
   <div class="inner w100 relative">
     <span class="f-left">  
-      <a href="/blog/">
+      <a href="/blog//">
           <h1><code>()=>{}</code></h1>
       </a>
     </span>
@@ -111,7 +111,7 @@
 	      
 	    
 	      
-	        <a href="/blog/about" title="About">About</a>
+	        <a href="/blog//about" title="About">About</a>
 	      
 	    
 	      
@@ -121,7 +121,7 @@
 	      
 	    
 	      
-	        <a href="/blog/privacy" title="Privacy">Privacy</a>
+	        <a href="/blog//privacy" title="Privacy">Privacy</a>
 	      
 	    
 	      
@@ -332,7 +332,7 @@ sta MEMORY_CONTROL
 <h2 id="how-to-use-library-in-another-library">How to use library (in another library)</h2>
 <p>Assuming you have checked out a library into some common library directory of your choice, using it in your code is relatively simple. Look at my directory structure where I have checked out my libraries:</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/travis-ci/library-directory.png" alt="Content of lib dir" /></p>
+<p><img src="https://c64lib.github.io/blog/cbm/img/travis-ci/library-directory.png" alt="Content of lib dir" /></p>
 
 <p>When using KickAssembler from command line you use <code class="highlighter-rouge">-libdir</code> parameter to specify <code class="highlighter-rouge">c64lib</code> directory location (in my case) and you can write your source code like this:</p>
 
@@ -372,7 +372,7 @@ initialize: {
 
 <p>If you use IDE such as <a href="http://www.popelganda.de/relaunch64.html">Relaunch64</a>, you must customize Compile &amp; Run Scripts in following way:</p>
 
-<p><img src="https://maciejmalecki.github.io/blog/cbm/img/travis-ci/relaunch64.png" alt="How to customize Relaunch64" /></p>
+<p><img src="https://c64lib.github.io/blog/cbm/img/travis-ci/relaunch64.png" alt="How to customize Relaunch64" /></p>
 
 <h2 id="bring-some-automation-with-travis-ci">Bring some automation with Travis CI</h2>
 <p>Interesting part starts actually here. <a href="https://travis-ci.org">TravisCI</a> is a CI environment that is very well integrated with <a href="https://github.com">GitHub</a>. It is also free for public repositories, so as long as we’re doing Open Source, we don’t have to invest - cool. Once you integrate Travis with your GIT repository, it will start watching for pushes (on any branch, pull request, tag, etc). When new push is detected, it scans your repository for <code class="highlighter-rouge">.travis.yml</code> configuration file and according to what’s inside provides your own temporary little linux machine on which you can actually do anything. Most likely you do a build of your software, you can even launch it and test it if you wish.</p>

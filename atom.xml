@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>()=>{} | Void's blog</title>
- <link href="https://maciejmalecki.github.io/atom.xml" rel="self"/>
- <id>https://maciejmalecki.github.io</id>
- <updated>2019-11-18T07:55:23+00:00</updated>
+ <link href="https://c64lib.github.io/atom.xml" rel="self"/>
+ <id>https://c64lib.github.io</id>
+ <updated>2019-11-18T09:51:34+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
@@ -15,8 +15,8 @@
 
  <entry>
    <title>Put subroutine into the library</title>
-   <link href="https://maciejmalecki.github.io/macro-hosted-subroutines"/>
-   <id>https://maciejmalecki.github.io/macro-hosted-subroutines</id>
+   <link href="https://c64lib.github.io/macro-hosted-subroutines"/>
+   <id>https://c64lib.github.io/macro-hosted-subroutines</id>
    <updated>2018-08-02T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to...</content>
  </entry>
@@ -25,8 +25,8 @@
 
  <entry>
    <title>Writing and using libraries in KickAssembler</title>
-   <link href="https://maciejmalecki.github.io/assembler-libraries"/>
-   <id>https://maciejmalecki.github.io/assembler-libraries</id>
+   <link href="https://c64lib.github.io/assembler-libraries"/>
+   <id>https://c64lib.github.io/assembler-libraries</id>
    <updated>2018-04-26T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do...</content>
  </entry>
@@ -35,8 +35,8 @@
 
  <entry>
    <title>Review&#58; New PSU for Commodore 64/128</title>
-   <link href="https://maciejmalecki.github.io/new-psu-for-c64"/>
-   <id>https://maciejmalecki.github.io/new-psu-for-c64</id>
+   <link href="https://c64lib.github.io/new-psu-for-c64"/>
+   <id>https://c64lib.github.io/new-psu-for-c64</id>
    <updated>2018-02-04T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore...</content>
  </entry>

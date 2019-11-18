@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://maciejmalecki.github.io/blog/new-psu-for-c64</loc>
+<loc>https://c64lib.github.io/blog/new-psu-for-c64</loc>
 <lastmod>2018-02-04T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://maciejmalecki.github.io/blog/assembler-libraries</loc>
+<loc>https://c64lib.github.io/blog/assembler-libraries</loc>
 <lastmod>2018-04-26T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://maciejmalecki.github.io/blog/macro-hosted-subroutines</loc>
+<loc>https://c64lib.github.io/blog/macro-hosted-subroutines</loc>
 <lastmod>2018-08-02T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://maciejmalecki.github.io/blog/404</loc>
+<loc>https://c64lib.github.io/blog/404</loc>
 </url>
 <url>
-<loc>https://maciejmalecki.github.io/blog/about</loc>
+<loc>https://c64lib.github.io/blog/about</loc>
 </url>
 <url>
-<loc>https://maciejmalecki.github.io/blog/</loc>
+<loc>https://c64lib.github.io/blog/</loc>
 </url>
 <url>
-<loc>https://maciejmalecki.github.io/blog/privacy</loc>
+<loc>https://c64lib.github.io/blog/privacy</loc>
 </url>
 </urlset>
