@@ -4,10 +4,10 @@ description: "t.b.d."
 author: Maciej Małecki
 name: "maciejmalecki"
 email: "malecki.maciej@gmail.com"
-url: "https://maciejmalecki.github.io"
+url: "https://c64lib.github.io"
 
 # Build settings
-baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /blog/ # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
@@ -37,6 +37,6 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
-repository: "maciejmalecki/blog"
+repository: "c64lib/blog"
 username: maciejmalecki
 repo: blog
