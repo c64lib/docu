@@ -167,7 +167,7 @@ How to use library (in another library)
 ---------------------------------------
 Assuming you have checked out a library into some common library directory of your choice, using it in your code is relatively simple. Look at my directory structure where I have checked out my libraries:
 
-![Content of lib dir]({{ "/cbm/img/travis-ci/library-directory.png" | absolute_url }})
+![Content of lib dir]({{ "/news/img/travis-ci/library-directory.png" | absolute_url }})
 
 When using KickAssembler from command line you use ```-libdir``` parameter to specify ```c64lib``` directory location (in my case) and you can write your source code like this:
 
