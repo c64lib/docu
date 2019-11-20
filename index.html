@@ -12,7 +12,7 @@ software.
   {% for page in sorted_pages %}
     {% if page.layout == "page" and page.navOnly != true %}
       <li class="toc-entry">
-        <h2><a href="{{ page.url}}">{{ page.title }}</a></h2>
+        <h2><a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl}}{% endif %}">{{ page.title }}</a></h2>
       </li>
     {% endif %}
   {% endfor %}
