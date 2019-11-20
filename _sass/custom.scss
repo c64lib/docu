@@ -1,6 +1,25 @@
 /*- Custom style -*/
 
 // -- Put custom style under this point -- //
-img + em { 
-	
+
+// custom colors
+$header-background-color: lightgrey;
+
+img + em {
+
+}
+
+// tables
+table {
+  border-spacing: 0px;
+  th {
+    background-color: $header-background-color;
+  }
+  th, td {
+    padding: 5px;
+    margin: 0px;
+  }
+  img {
+    margin-bottom: 0px;
+  }
 }

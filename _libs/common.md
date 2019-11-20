@@ -1,9 +1,10 @@
 ---
 title: common
+name: common
 description: tbd
 url: https://github.com/c64lib/common
 weight: 1
-layout: default
+layout: module_api
 ---
 
 {% for item in site.libs_common %}
