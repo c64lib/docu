@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://c64lib.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://c64lib.github.io/blog/" rel="alternate" type="text/html" /><updated>2019-11-20T22:58:38+00:00</updated><id>https://c64lib.github.io/blog/</id><title type="html">()=&amp;gt;{} | Void’s blog</title><subtitle>t.b.d.</subtitle><author><name>Maciej Małecki</name></author><entry><title type="html">Put subroutine into the library</title><link href="https://c64lib.github.io/blog/macro-hosted-subroutines" rel="alternate" type="text/html" title="Put subroutine into the library" /><published>2018-08-02T00:00:00+00:00</published><updated>2018-08-02T00:00:00+00:00</updated><id>https://c64lib.github.io/blog/macro-hosted-subroutines</id><content type="html" xml:base="https://c64lib.github.io/blog/macro-hosted-subroutines">&lt;p&gt;Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to keep our code compact and maintainable. It allows us to keep memory footprint of our code at reasonable level. With possibility of passing execution arguments as well as result, subroutines become fully blown procedures and functions as known from high level languages.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://c64lib.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://c64lib.github.io/blog/" rel="alternate" type="text/html" /><updated>2019-11-20T23:12:39+00:00</updated><id>https://c64lib.github.io/blog/</id><title type="html">()=&amp;gt;{} | Void’s blog</title><subtitle>t.b.d.</subtitle><author><name>Maciej Małecki</name></author><entry><title type="html">Put subroutine into the library</title><link href="https://c64lib.github.io/blog/macro-hosted-subroutines" rel="alternate" type="text/html" title="Put subroutine into the library" /><published>2018-08-02T00:00:00+00:00</published><updated>2018-08-02T00:00:00+00:00</updated><id>https://c64lib.github.io/blog/macro-hosted-subroutines</id><content type="html" xml:base="https://c64lib.github.io/blog/macro-hosted-subroutines">&lt;p&gt;Subroutine is an essential concept in programming. Advantages of using subroutines are quite clear - instead of doing a repetitive work, we define chunk of code once and “jump” to it any time we need it. It is a part of DRY principle (do not repeat yourself), which allows to keep our code compact and maintainable. It allows us to keep memory footprint of our code at reasonable level. With possibility of passing execution arguments as well as result, subroutines become fully blown procedures and functions as known from high level languages.&lt;/p&gt;
 
 &lt;p&gt;How does MOS 6502 support subroutines? We essentially need two instructions: “&lt;strong&gt;J&lt;/strong&gt;ump to &lt;strong&gt;S&lt;/strong&gt;ub&lt;strong&gt;R&lt;/strong&gt;outine” that does typical long jump to given memory address and “&lt;strong&gt;R&lt;/strong&gt;e&lt;strong&gt;T&lt;/strong&gt;urn from &lt;strong&gt;S&lt;/strong&gt;ubroutine” that returns to the address pointing to the next instruction after “jump”. These instructions are named &lt;code class=&quot;highlighter-rouge&quot;&gt;JSR&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;RTS&lt;/code&gt;, respectively. &lt;code class=&quot;highlighter-rouge&quot;&gt;JSR&lt;/code&gt; does actually more than simple &lt;code class=&quot;highlighter-rouge&quot;&gt;JMP&lt;/code&gt; - it pushes return address to the stack (MOS 6502 uses memory page 1 for stack: addresses from &lt;code class=&quot;highlighter-rouge&quot;&gt;$100&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;$1FF&lt;/code&gt;). &lt;code class=&quot;highlighter-rouge&quot;&gt;RTS&lt;/code&gt; pulls return address from stack and stores it as program counter (PC).&lt;/p&gt;
 
@@ -392,7 +392,7 @@ sta MEMORY_CONTROL
 &lt;h2 id=&quot;how-to-use-library-in-another-library&quot;&gt;How to use library (in another library)&lt;/h2&gt;
 &lt;p&gt;Assuming you have checked out a library into some common library directory of your choice, using it in your code is relatively simple. Look at my directory structure where I have checked out my libraries:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/cbm/img/travis-ci/library-directory.png&quot; alt=&quot;Content of lib dir&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/news/img/travis-ci/library-directory.png&quot; alt=&quot;Content of lib dir&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When using KickAssembler from command line you use &lt;code class=&quot;highlighter-rouge&quot;&gt;-libdir&lt;/code&gt; parameter to specify &lt;code class=&quot;highlighter-rouge&quot;&gt;c64lib&lt;/code&gt; directory location (in my case) and you can write your source code like this:&lt;/p&gt;
 
@@ -484,81 +484,4 @@ initialize: {
 
 &lt;p&gt;You can refer test library on GitHub:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/c64lib/test&quot;&gt;https://github.com/c64lib/test&lt;/a&gt;&lt;/p&gt;</content><author><name>Maciej Małecki</name></author><summary type="html">It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do not want to complain, I fully understand that productivity is a key and live is hard.</summary></entry><entry><title type="html">Review: New PSU for Commodore 64/128</title><link href="https://c64lib.github.io/blog/new-psu-for-c64" rel="alternate" type="text/html" title="Review&amp;#58; New PSU for Commodore 64/128" /><published>2018-02-04T00:00:00+00:00</published><updated>2018-02-04T00:00:00+00:00</updated><id>https://c64lib.github.io/blog/new-psu-for-c64</id><content type="html" xml:base="https://c64lib.github.io/blog/new-psu-for-c64">&lt;p&gt;Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore its spec and generate voltage that exceeds its nominal 5VDC thus frying most of precious chips.&lt;/p&gt;
-
-&lt;p&gt;Original PSU is not easy to replace. Commodore decided that C64 must be powered with two types of voltages: 9VAC that is then rectified and regulated by circuit located inside computer and 5VDC that is rectified and regulated by circuit located inside power brick and is used &lt;em&gt;directly&lt;/em&gt; to power most of C64 chips. This second power line is actually critical, because any deviation from pretty narrow voltage range can either cause unstable operation or damage certain chips (or even all of them). Regulation circuit located inside brick proves to do this devastating job very well. For even more exciting details just check &lt;a href=&quot;https://www.c64-wiki.com/wiki/Power_Supply&quot;&gt;this&lt;/a&gt; excellent source.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/cbm/img/psu-rs/psu-comparison.jpg&quot; alt=&quot;Comparison with original units&quot; title=&quot;Comparison with original units&quot; /&gt;
-&lt;em&gt;Various units, from left: Ismet supply (“breadbin”), Ismet supply (early C64C), Dee Van unit (C64 short board) and a brand new PSU replacement by &lt;a href=&quot;mailto:raf@c64power.com&quot;&gt;Rafał Szyja&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I wouldn’t exaggerate if I say that using the same PSU for more than 30 years is like playing Russian Roulette. We definitely needs some…&lt;/p&gt;
-
-&lt;h1 id=&quot;alternatives&quot;&gt;…alternatives&lt;/h1&gt;
-
-&lt;p&gt;There are plenty of solutions available, unfortunatelly most of them are DIY, and not everybody have sufficient skills for that. And if have and do something wrong, you may kill a patient. Too bad… Let’s look briefly at options that we have:&lt;/p&gt;
-
-&lt;h2 id=&quot;power-savers&quot;&gt;Power savers&lt;/h2&gt;
-
-&lt;p&gt;Power Saver is an additional overvoltage protection that is plugged between PSU and computer (can be also mounted inside the computer). I think that the idea came originally from &lt;a href=&quot;http://personalpages.tds.net/~rcarlsen/cbm/c64/SAVER/&quot;&gt;Ray Carlsen&lt;/a&gt;. In its simplest form this is electro-mechanical device using relay that turns off 5V DC line when some predefined threshold (i.e. 5.4V) is meet. Ray never claimed that saver is “the final and best solution” - it’s rather workaround of a problem - you can still use your PSU while waiting for new replacement. With saver and original old PSU there is still a risk, that circuit and relay will not react fast enough to save your electronics, if regulator gets badly shorted.&lt;/p&gt;
-
-&lt;p&gt;However, it still makes sense to use saver while using switching PSU replacement:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;After-market power supplies, even switching types, can fail at any time. Switchers are more reliable and much less prone to catastrophic failures but can still cause damage to the computer if they fail. This Saver is designed to protect any computer that uses the standard Commodore “brick” power supply as well as any newer switch-mode PS.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;replace-linear-regulator&quot;&gt;Replace linear regulator&lt;/h2&gt;
-
-&lt;p&gt;This is pretty easy DIY fix that someone suggested to me in Facebook discussion: if you’re lucky enough to disassemble your original PSU, you can replace linear regulator with switching regulator such as 5V UBEC, commonly used to power electronics onboard of RC models. Original linear voltage regulator seems to prone to failures which lead to excees voltages, switching regulators should be much more robust.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/cbm/img/psu-rs/ismet-ubec.jpg&quot; alt=&quot;Ismet refurbished with UBEC regulator&quot; title=&quot;Installing UBEC&quot; /&gt;
-&lt;em&gt;Old type of Ismet PSU and voltage regulator replacement&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This kind of solution may be problematic as not every type of PSU can be easily disassembled. “Brick” units (Dee Van) cannot, because they are filled with epoxy. Old Ismet units can be disassembled however, as they are also partially filled, it may be not easy. New Ismet units (I don’t have any in my collection) are fully repairable.&lt;/p&gt;
-
-&lt;p&gt;There is one little remark from my side: you should check your UBECs carefully before mounting them: they tend to produce slightly different voltages. I also had a bad luck - one of UBECs that I have purchased was internally shorted - it produced exactly the same voltage on output as on input!&lt;/p&gt;
-
-&lt;h2 id=&quot;bundle-two-market-adapters&quot;&gt;Bundle two market adapters&lt;/h2&gt;
-
-&lt;p&gt;Theoretically it is possible to use two separate adapters that are available on market: one for 9VAC line, one for 5VDC line. They can be easily integrated with single DIN plug and once max load parameters are OK, you should be able to turn on your C64 and see a blue screen ;-) This solution is also offered by &lt;a href=&quot;http://personalpages.tds.net/~rcarlsen/custom%20ps.html&quot;&gt;Ray&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Aesthetics of this solution might be questionable but normally you don’t look at your PSU all the time. It can be however difficult to find wall adapters with decent quality - it is both durability (a week ago my 9V adapter for Arduino just blew up after 24hrs of constant working) and quality of current.&lt;/p&gt;
-
-&lt;h2 id=&quot;buy-a-new-one&quot;&gt;Buy a new one&lt;/h2&gt;
-
-&lt;p&gt;Well, we should’ve thought about it earlier, huh? I just got new unit and I’m going to try it out.&lt;/p&gt;
-
-&lt;p&gt;Mainstream producers do not provide replacement units - no surprise here. We must rely on enthusiasts, as usuall. The unit I’m going to describe here has Polish origins. It has been designed and produced by &lt;a href=&quot;mailto:raf@c64power.com&quot;&gt;Rafał Szyja&lt;/a&gt; from &lt;a href=&quot;http://c64power.com&quot;&gt;C64Power.com&lt;/a&gt;. I’ve ordered it and got a package shortly after. Once the box is opened, I found nice looking “brick” in light grey color bundled with white cabling. Unfortunately the DIN plug is black but this is just a minor issue. All my cabling is black anyway…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/cbm/img/psu-rs/psu-overview.jpg&quot; alt=&quot;PSU from Rafał Szyja&quot; title=&quot;Overview of PSU&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The unit is not particularily small. In fact it is bigger than any of original PSUs that are in my possesion (refer the first figure). Rafał decided not to produce dedicated case but to use generic one that is available on the market. Most importantly, we have two power supply units here in fact, bundled in one package. Bigger case also improves cooling (that was actually a weak point of original PSU). Here in fact, I haven’t observed any noticeable heat production, which is very promising.&lt;/p&gt;
-
-&lt;p&gt;I decided to use all my functioning equipment (see pictures) for testing. Because I don’t have appropriate adapter (square power plug), I haven’t tested how PSU cooperates with my flat C128 - for this you have to wait a little bit more. I used this occassion as an excuse to “de-dust” all of my disk drives and use them as parts of testing sets. Because Rafał claims we can draw up to 3A from his supply, I also included my brand new 1541 Ultimate cartridge. For Ultimate II+ do not use auxiliary power supply, so the PSU must provide whole power.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/cbm/img/psu-rs/testing-short-board.jpg&quot; alt=&quot;Testing sets 1&quot; /&gt;
-&lt;em&gt;My short-boarded C64C was used both with 1541 Ultimate II+ (I also launched 16MB REU demos) and original 1541II.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;C64C and Ultimate is the combination I use most of the time. I have run this set for more than a month now and noticed no instabilities or other reliability problems. The PSU runs cool and silent. After two hours of operation, temperature of PSU (measured near ventilation holes) have risen from 20°C to 27°C, not even close to capabilities of original unit, that gets really hot after just 30 minutes of operation.&lt;/p&gt;
-
-&lt;p&gt;Next, I have replaced 1541U with real 1541II drive. I deliberately left PSU on the desk, lying nearby floppy drive so see whether it produces any significant interference that may influence the drive. This time I have also no problems - both C64 and 1541II run stable and PSU stayed cool, unlike my original power supply I use for 1541 disk drive (I have also modern replacement for this one, must test it next time - but I don’t even remember who sold me this one).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://c64lib.github.io/blog/cbm/img/psu-rs/testing-long-board.jpg&quot; alt=&quot;Testing sets 2&quot; /&gt;
-&lt;em&gt;My older C64C model with long board together plus 1541C and my C64 “breadbin” with 1541 disk drive.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I have also used this PSU with C64 (Assy 250407) and 1541 “toaster”. With this version more chips are using 9VAC line. There was apparently no difference in PSU behavior.&lt;/p&gt;
-
-&lt;p&gt;Last set that I have assembled for this test was C64C with long board connected with 1541 resembling “C” model. I wouldn’t expect any problems here and in fact there none.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;Here are some numbers I’ve got from Rafał:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: 230V, 50Hz&lt;/li&gt;
-  &lt;li&gt;Output: 5V DC 3A, 9V AC 1.1A&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sadly, I’m lacking of sufficient electrotechnical skills so I am not able to provide exact measurements of voltage ripple. Once I find someone that can help me with that, I will update this post.&lt;/p&gt;
-
-&lt;p&gt;Power supply is very solid, the cabling is of good quality. I’m not affraid keeping my Commodore on for a long time anymore. &lt;strong&gt;I fully recommend it!&lt;/strong&gt; You can order this unit from &lt;a href=&quot;https://www.facebook.com/rafalszyja?fref=mentions&quot;&gt;Rafał Szyja&lt;/a&gt; (&lt;a href=&quot;https://www.facebook.com/c64power/?fref=mentions&quot;&gt;C64 Power&lt;/a&gt;).&lt;/p&gt;</content><author><name>Maciej Małecki</name></author><summary type="html">Reliability of original C64 CPU has been disputed in community for long time. Commodore had problems with it in the past, plenty of houses were put on fire. Today, over 35 years after first Commodore 64 was produced another issue becomes especially painful: some of bricks decide now to ignore its spec and generate voltage that exceeds its nominal 5VDC thus frying most of precious chips.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://github.com/c64lib/test&quot;&gt;https://github.com/c64lib/test&lt;/a&gt;&lt;/p&gt;</content><author><name>Maciej Małecki</name></author><summary type="html">It’s a long way I took from early times when I coded something for MOS 65XX family to now, when I actually code for money. What was really a joy or hobby, now becomes a rather routine work guided by corporate processes, software frameworks and project management methodologies. I do not want to complain, I fully understand that productivity is a key and live is hard.</summary></entry></feed>
