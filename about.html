@@ -57,6 +57,18 @@
 	    
 	  
 	    
+	      <a href="/blog//contribute" title="Contribute">Contribute</a>
+	    
+	  
+	    
+	      <a href="/blog//blog/" title="Blog">Blog</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/blog//libraries-description" title="Libraries description">Libraries description</a>
+	    
 	  
 	    
 	  
@@ -100,13 +112,30 @@
       
         <header id="header" class="parent justify-spaceBetween">
   <div class="inner w100 relative">
-    <span class="f-left">  
+    <span class="f-left">
       <a href="/blog//">
-          <h1><code>()=>{}</code></h1>
+          <h1><code>c64lib</code></h1>
       </a>
     </span>
     <span id="nav-links" class="absolute right bottom">
       <!-- Nav pages -->
+      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
 	    
 	      
 	    
@@ -115,24 +144,18 @@
 	      
 	    
 	      
-	    
+	        <a href="/blog//blog/" title="Blog">Blog</a>
 	      
 	    
+	      
+	        <a href="/blog//contribute" title="Contribute">Contribute</a>
 	      
 	    
 	      
 	        <a href="/blog//privacy" title="Privacy">Privacy</a>
 	      
 	    
-	      
-	    
-	      
-	    
-	      
-	    
-	      
-	    
-      
+
       <!-- Nav links -->
 	    <a href="https://github.com/c64lib">Github</a>
 
@@ -153,9 +176,57 @@
 
 			<article id="page">
 	
-  <p>Well, not too much so far.</p>
+  <h1 id="welcome-to-the-c64lib-documentation">Welcome to the c64lib documentation!</h1>
 
-<p>Just refer my <a href="https://www.linkedin.com/in/maciejmalecki/">Linkedin</a> profile for time being.</p>
+<h2 id="ci-status">CI status</h2>
+<p>Please note, that C64lib is migrating to CircleCI as CI environment. For time
+being status from both CI (Travis-CI and CircleCI) are presented below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Module</th>
+      <th style="text-align: left">Master</th>
+      <th style="text-align: left">Develop</th>
+      <th style="text-align: left">Master</th>
+      <th style="text-align: left">Develop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">common</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/common"><img src="https://travis-ci.org/c64lib/common.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/common"><img src="https://travis-ci.org/c64lib/common.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/common/tree/master"><img src="https://circleci.com/gh/c64lib/common/tree/master.svg?style=svg" alt="CircleCI" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/common/tree/develop"><img src="https://circleci.com/gh/c64lib/common/tree/develop.svg?style=svg" alt="CircleCI" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">chipset</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/chipset"><img src="https://travis-ci.org/c64lib/chipset.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/chipset"><img src="https://travis-ci.org/c64lib/chipset.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/text"><img src="https://travis-ci.org/c64lib/text.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/text"><img src="https://travis-ci.org/c64lib/text.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/text/tree/master"><img src="https://circleci.com/gh/c64lib/text/tree/master.svg?style=svg" alt="CircleCI" /></a></td>
+      <td style="text-align: left"><a href="https://circleci.com/gh/c64lib/text/tree/develop"><img src="https://circleci.com/gh/c64lib/text/tree/develop.svg?style=svg" alt="CircleCI" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">copper64</td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/copper64"><img src="https://travis-ci.org/c64lib/copper64.svg?branch=master" alt="Build Status" /></a></td>
+      <td style="text-align: left"><a href="https://travis-ci.org/c64lib/copper64"><img src="https://travis-ci.org/c64lib/copper64.svg?branch=develop" alt="Build Status" /></a></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><img src="/blog/img/c64lib-avatar.jpg" alt="c64lib" /></p>
 
 
 </article>
@@ -168,7 +239,7 @@
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169;2018-2019 C64Lib</span></footer>
+	    <footer><span>&#169;2018-2019 c64lib</span></footer>
 
 
       <div id="gdpr" style="display: none;">

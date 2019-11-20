@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>common</title>
-  <meta name="description" content="tbd">
+	<title>Libraries description</title>
+  <meta name="description" content="t.b.d.">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/blog/css/main.css">
@@ -174,17 +174,37 @@
 
 		<main>
 
-			<article>
+			<article id="page">
+	
+  <h1 id="libraries-description">Libraries description</h1>
+<p>The <code class="highlighter-rouge">c64lib</code> project consists of multiple libraries. Each library is hosted as separate GitHub repository 
+and have corresponding Travis-CI entry defined (see: <a href="https://travis-ci.org/c64lib">https://travis-ci.org/c64lib</a>).</p>
 
-  
-  <p>libs</p>
-  
-  <p>libs_common</p>
-  
-  <p>posts</p>
-  
+<p>There are following core libraries:</p>
+<ul>
+  <li><a href="https://github.com/c64lib/common">common</a> - the one that hosts some commonly used functions, macros and subroutines; no other <code class="highlighter-rouge">c64lib</code> library can work without it. This code is intended to be platform (C64) independent, it complies to typical MOS 6502 assembler syntax (except it is written in KickAss, which is C64 specific at the moment).</li>
+  <li><a href="https://github.com/c64lib/chipset">chipset</a> - the one that hosts code that is platform specific and is dedicated to handle typical C64 chipset such as VIC-II, SID, CIA as well as typical C64 memory layout.</li>
+</ul>
+
+<p>There are following auxiliary libraries:</p>
+<ul>
+  <li><a href="https://github.com/c64lib/text">text</a> - the one that handles displaying text in text mode of Commodore 64 / VIC-II.</li>
+</ul>
+
+<p>There are following application libraries:</p>
+<ul>
+  <li><a href="https://github.com/c64lib/copper64">copper64</a> - utility library that makes raster interrupt programming on VIC-II pleasant and easy.</li>
+</ul>
+
+<h2 id="library-dependencies">Library dependencies</h2>
+<p>The following diagram describes dependencies between internal libraries of <code class="highlighter-rouge">c64lib</code> project. 
+There is also an excellent <code class="highlighter-rouge">64spec</code> testing library used and shown as external reference.</p>
+
+<p><img src="img/Library%20dependencies.png" alt="Image dependencies" /></p>
+
+
+
 </article>
-
 
 	  </main>
 
