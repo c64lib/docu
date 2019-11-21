@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://c64lib.github.io/docu/libs/chipset</loc>
-<lastmod>2019-11-21T21:29:50+00:00</lastmod>
+<lastmod>2019-11-21T22:06:06+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/libs/common</loc>
-<lastmod>2019-11-21T21:29:50+00:00</lastmod>
+<lastmod>2019-11-21T22:06:06+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/libs/copper64</loc>
-<lastmod>2019-11-21T21:29:50+00:00</lastmod>
+<lastmod>2019-11-21T22:06:06+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/libs/text</loc>
-<lastmod>2019-11-21T21:29:50+00:00</lastmod>
+<lastmod>2019-11-21T22:06:06+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/assembler-libraries</loc>
@@ -44,7 +44,7 @@
 <loc>https://c64lib.github.io/docu/</loc>
 </url>
 <url>
-<loc>https://c64lib.github.io/docu/libraries-description</loc>
+<loc>https://c64lib.github.io/docu/libraries</loc>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/privacy</loc>
