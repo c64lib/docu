@@ -4,12 +4,22 @@
  <title>()=>{} | Void's blog</title>
  <link href="https://c64lib.github.io/atom.xml" rel="self"/>
  <id>https://c64lib.github.io</id>
- <updated>2019-11-21T09:41:57+00:00</updated>
+ <updated>2019-11-21T17:41:05+00:00</updated>
  <author>
    <name></name>
    <uri></uri>
    <email></email>
  </author>
+
+ 
+
+ <entry>
+   <title>Gradle Retro Assembler plugin 1.0.0 is out</title>
+   <link href="https://c64lib.github.io/gradle-retro-assembler-plugin-1-0-is-out"/>
+   <id>https://c64lib.github.io/gradle-retro-assembler-plugin-1-0-is-out</id>
+   <updated>2019-11-07T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;I would like to announce that Retro Assembler plugin for Gradle build tool is officially released. Version 1.0.0 provides following features:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Support for KickAssembler v4.19+&lt;/li&gt; &lt;li&gt;Can assemble any number of &lt;code class=&quot;highlighter-rouge&quot;&gt;asm&lt;/code&gt; files with KickAss with single launch of Gradle tool&lt;/li&gt; &lt;li&gt;Automatically downloads proper version of KickAss and uses...</content>
+ </entry>
 
  
 

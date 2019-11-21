@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Contribute</title>
-  <meta name="description" content="How to contribute.">
+	<title>Gradle Retro Assembler plugin 1.0.0 is out</title>
+  <meta name="description" content="Gradle Retro Assembler plugin 1.0.0 is out">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/docu/css/main.css">
@@ -174,45 +174,31 @@
 
 		<main>
 
-			<article id="page">
-	
-  <h1 id="contribute">Contribute</h1>
-<p>In this document we specify rules that must be obeyed when working with <code class="highlighter-rouge">c64lib</code> repositories. These rules are intended to make our lives easier, not vice versa. These rules are valid for all repositories unless explicitly overridden.</p>
+			<article id="post-page">
+	<h2>Gradle Retro Assembler plugin 1.0.0 is out</h2>		
+	<time datetime="2019-11-07T00:00:00+00:00" class="by-line">07 Nov 2019</time>
+	<div class="content">
 
-<h2 id="master-branch">Master branch</h2>
-<p>Master branch is the most important branch for each library. Based on this branch new releases are created. Therefore master branch is always protected - it cannot be deleted or pushed with force option.</p>
-
-<p>The general rule is that we do not work directly on master branch - for each feature or bug a dedicated feature branch must be created. When work is done and tested, a pull request to master should be created and reviewed. Once it is done, feature branch should be rebased on master, squashed if needed and merged with fast forward option so that we get linear history on master branch.</p>
-
-<h2 id="develop-branch">Develop branch</h2>
-<p>Develop branch is an optional branch that could be used for developing new version of library. When this option is chosen (it should be chosen for complex releases, for simple tasks we probably don’t need it at all), all feature branches that are indented to be in this forthcoming release should be started from develop branch and should be merged (with rebase and fast forward, as mentioned earlier) to develop branch. When release is ready, develop branch should be rebased and merged with fast forward option to the master branch.</p>
-
-<h2 id="feature-branch">Feature branch</h2>
-<p>For each feature or bugfix being developed a feature branch should be created. It should start from either master or develop branch (if develop branch exists) and each piece of development should be committed and pushed there.</p>
-
-<p>For each feature or branch there should be an issue existing in one of the projects associated with given repository. Each issue has ID that is displayed as #<number> (i.e.: #10). Each feature branch name should follow that ID in following form: `<ID>-<number>` (i.e.: `CPR-10`).</number></ID></number></p>
-
-<p>Each repository has following ID assigned:</p>
+		<p>I would like to announce that Retro Assembler plugin for Gradle build tool is
+officially released. Version 1.0.0 provides following features:</p>
 <ul>
-  <li><code class="highlighter-rouge">CMN</code> - c64lib/common</li>
-  <li><code class="highlighter-rouge">CHIP</code> - c64lib/chipset</li>
-  <li><code class="highlighter-rouge">TEXT</code> - c64lib/text</li>
-  <li><code class="highlighter-rouge">CPR</code> - c64lib/copper64</li>
+  <li>Support for KickAssembler v4.19+</li>
+  <li>Can assemble any number of <code class="highlighter-rouge">asm</code> files with KickAss with single launch of Gradle tool</li>
+  <li>Automatically downloads proper version of KickAss and uses it</li>
+  <li>Automatically downloads any other assembly libraries as long as they are published on GitHub</li>
+  <li>Assembles and executes unit tests written with <a href="https://64bites.com/64spec/">64spec</a></li>
 </ul>
 
-<h2 id="deleting-branches">Deleting branches</h2>
-<p>Feature branches should be deleted after merging. One can easily do it using GitHub GUI or alternatively using command line:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin -d &lt;branch name&gt;
-</code></pre></div></div>
-
-<p>Develop branch can also be deleted or reset to latest master commit and pushed with force option.</p>
-
-<h2 id="library-versioning">Library versioning</h2>
-<p>TBD</p>
+<p>Source code and more complete documentation are available 
+on <a href="https://github.com/c64lib/gradle-retro-assembler-plugin">GitHub</a>. Plugin itself is published 
+on <a href="https://plugins.gradle.org/plugin/com.github.c64lib.retro-assembler/1.0.0">plugins.gradle.org</a>.</p>
 
 
+		
+	</div>
 </article>
+
+
 
 	  </main>
 

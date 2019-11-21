@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://c64lib.github.io/docu/libs/chipset</loc>
-<lastmod>2019-11-21T09:41:57+00:00</lastmod>
+<lastmod>2019-11-21T17:41:05+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/libs/common</loc>
-<lastmod>2019-11-21T09:41:57+00:00</lastmod>
+<lastmod>2019-11-21T17:41:05+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/libs/copper64</loc>
-<lastmod>2019-11-21T09:41:57+00:00</lastmod>
+<lastmod>2019-11-21T17:41:05+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/libs/text</loc>
-<lastmod>2019-11-21T09:41:57+00:00</lastmod>
+<lastmod>2019-11-21T17:41:05+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/assembler-libraries</loc>
@@ -23,6 +23,10 @@
 <url>
 <loc>https://c64lib.github.io/docu/macro-hosted-subroutines</loc>
 <lastmod>2018-08-02T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://c64lib.github.io/docu/gradle-retro-assembler-plugin-1-0-is-out</loc>
+<lastmod>2019-11-07T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://c64lib.github.io/docu/404</loc>
