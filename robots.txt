@@ -1,1 +1,1 @@
-Sitemap: https://c64lib.github.io/blog/sitemap.xml
+Sitemap: https://c64lib.github.io/docu/sitemap.xml
