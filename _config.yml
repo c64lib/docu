@@ -7,7 +7,7 @@ email: "malecki.maciej@gmail.com"
 url: "https://c64lib.github.io"
 
 # Build settings
-baseurl: /blog # Change this to your relative path (ex: /blog/), or leave just a /
+baseurl: /docu # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 source: .
 destination: ./_site
@@ -45,6 +45,6 @@ custom_header: false
 custom_nav_footer: false
 reverse: false
 
-repository: "c64lib/blog"
+repository: "c64lib/docu"
 username: maciejmalecki
-repo: blog
+repo: docu
