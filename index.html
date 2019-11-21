@@ -5,14 +5,14 @@ The c64lib is a set of libraries written in KickAssembler. They are dedicated to
 and consist of functions, macros and subroutines that can be used to speed up development process of Commodore 64
 software.
 
-<h1>Table of content</h1>
-
+<h1>Pinned documents</h1>
 {% assign sorted_pages = site.pages | sort: "title" %}
-<ul id="toc">
+<ul id="posts">
   {% for page in sorted_pages %}
-    {% if page.layout == "page" and page.navOnly != true %}
-      <li class="toc-entry">
+    {% if page.layout == "page" and page.pinned == true %}
+      <li class="post">
         <h2><a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl}}{% endif %}">{{ page.title }}</a></h2>
+        <p>{{ page.content | markdownify | strip_html | truncatewords:50 }}</p>
       </li>
     {% endif %}
   {% endfor %}

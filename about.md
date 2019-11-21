@@ -5,8 +5,6 @@ nav: true
 order: 1
 description: This page describes content of this blog.
 ---
-# Welcome to the c64lib documentation!
-
 ## CI status
 Please note, that C64lib is migrating to CircleCI as CI environment. For time
 being status from both CI (Travis-CI and CircleCI) are presented below.

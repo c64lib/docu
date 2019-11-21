@@ -5,7 +5,6 @@ order: 90
 nav: true
 description: How to contribute.
 ---
-# Contribute
 In this document we specify rules that must be obeyed when working with `c64lib` repositories. These rules are intended to make our lives easier, not vice versa. These rules are valid for all repositories unless explicitly overridden.
 
 ## Master branch
