@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113535243-4"></script>
+	<script>
+		var useCookies = (localStorage.getItem('useCookies') === 'true');
+		if (useCookies) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag () {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-113535243-4', { 'anonymize_ip': true });
+		}
+	</script>
+
+	
+
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Installation guide</title>
+  <meta name="description" content="Documentation portal for c64lib">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/docu/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/docu/">Home</a>
+
+		<!-- Nav pages -->
+		
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	      <a href="/docu/about" title="About">About</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="/docu/news/" title="News">News</a>
+	    
+	  
+	    
+	      <a href="/docu/contribute" title="Contribute">Contribute</a>
+	    
+	  
+	    
+	      <a href="/docu/privacy" title="Privacy">Privacy</a>
+	    
+	  
+
+    <!-- Nav links -->
+	  <a href="https://github.com/c64lib">Github</a>
+
+
+	</div>
+
+  <!-- Nav footer -->
+	
+	  <footer>
+
+</footer>
+
+	
+
+</nav>
+
+
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">
+      <a href="/docu/">
+          <h1><code>c64lib</code></h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	        <a href="/docu/about" title="About">About</a>
+	      
+	    
+	      
+	    
+	      
+	        <a href="/docu/news/" title="News">News</a>
+	      
+	    
+	      
+	        <a href="/docu/contribute" title="Contribute">Contribute</a>
+	      
+	    
+	      
+	        <a href="/docu/privacy" title="Privacy">Privacy</a>
+	      
+	    
+
+      <!-- Nav links -->
+	    <a href="https://github.com/c64lib">Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+
+		<main>
+
+			<article id="page">
+  <h1>Installation guide</h1>
+  <p>The <code class="highlighter-rouge">c64lib</code> is a set of libraries that can be used in assembly programs
+written with <a href="http://theweb.dk/KickAssembler/Main.html">Kick Assembler</a>. Each library consists of one or 
+more source files that shall be then imported in Kick Assembler program.
+There are several methods of downloading and “installation” of <code class="highlighter-rouge">c64lib</code> 
+libraries, some of them will be presented there starting from the most 
+convenient one.</p>
+
+<h2 id="using-gradle-as-a-build-tool">Using Gradle as a build tool</h2>
+<p>The easiest way to use <code class="highlighter-rouge">c64lib</code> is to add the libraries as dependencies
+to the <a href="https://gradle.org/">Gradle</a> build. It is an easy task due to 
+<a href="gradle-plugin">Retro Assembler plugin</a>.</p>
+
+<h3 id="when-gradle-is-already-used">When Gradle is already used</h3>
+<p>Well, when you are a happy user of Retro Assembler plugin, then you are
+even happier, because it’s extremely easy to add <code class="highlighter-rouge">c64lib</code> to your project.
+The <code class="highlighter-rouge">c64lib</code> is a <a href="https://github.com/c64lib">GitHub</a> project, so it can be added as GitHub
+dependency to your <code class="highlighter-rouge">gradle.build</code> file:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libFromGitHub "c64lib/common", "0.1.0"
+libFromGitHub "c64lib/chipset", "0.1.0"
+libFromGitHub "c64lib/text", "0.1.0"
+libFromGitHub "c64lib/copper64", "0.1.0"
+</code></pre></div></div>
+
+<p>Then you will be able to use all four libraries from <code class="highlighter-rouge">c64lib</code>. Of course
+not all four are mandatory. You can use any subset of them as long as you
+obey dependency graph as shown in <a href="libraries">here</a>.</p>
+
+<p>Retro Assembler plugin downloads all dependencies into default location:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.ga/deps
+</code></pre></div></div>
+
+<p>All libraries from <code class="highlighter-rouge">c64lib</code> will be downloaded under <code class="highlighter-rouge">c64lib</code> subfolder
+therefore the following location:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.ga/deps/c64lib
+</code></pre></div></div>
+
+<p>must be added to the lib dir so that Kick Assembler will see them when
+interpreting <code class="highlighter-rouge">#import</code> directive. The following must be also a part of
+your <code class="highlighter-rouge">gradle.build</code> file:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libDirs = [".ra/deps/c64lib"]
+</code></pre></div></div>
+
+<p>The complete <code class="highlighter-rouge">gradle.build</code> will be following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
+    id "com.github.c64lib.retro-assembler" version "1.0.1"
+}
+
+repositories {
+    jcenter()
+}
+
+apply plugin: "com.github.c64lib.retro-assembler"
+
+retroProject {
+    dialect = "KickAssembler"
+    dialectVersion = "5.9"
+    libDirs = [".ra/deps/c64lib"]
+
+    libFromGitHub "c64lib/common", "0.1.0"
+    libFromGitHub "c64lib/chipset", "0.1.0"
+    libFromGitHub "c64lib/text", "0.1.0"
+    libFromGitHub "c64lib/copper64", "0.1.0"
+}
+</code></pre></div></div>
+
+<h3 id="when-gradle-is-not-used">When Gradle is not used</h3>
+<p>but you really want to start using it, you have to enable it first.</p>
+
+<h3 id="manual-clone-from-github">Manual clone from GitHub</h3>
+<p>If you don’t want to or cannot use <a href="gradle-plugin">Retro Assembler plugin</a>, you can
+use your git client and clone libraries manually and then just point
+the location with <code class="highlighter-rouge">-libdir</code> parameter of the KickAss.</p>
+
+
+
+</article>
+
+
+	  </main>
+
+		  <!-- Pagination links -->
+      
+
+	  </div>
+
+	    <!-- Footer -->
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-11-23 23:13</span></footer>
+
+
+      <div id="gdpr" style="display: none;">
+        <p>
+          This web page uses cookies to track anonymous user activities. By continuing using this site
+          or by closing this banner you indicate your consent to use these cookies.
+          You can change settings, i.e. disable user tracking on <a href="privacy.html">privacy</a> page.
+        </p>
+        <button id="gdprClose">Close</button>
+      </div>
+
+	    <!-- Script -->
+      <script src="/docu/js/main.js"></script>	
+
+
+	</div>
+
+</body>
+</html>
