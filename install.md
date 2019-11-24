@@ -74,10 +74,54 @@ The complete `gradle.build` will be following:
 ### When Gradle is not used
 but you really want to start using it, you have to enable it first.
 
-### Manual clone from GitHub
+## Manual clone from GitHub
 If you don't want to or cannot use [Retro Assembler plugin][ra], you can
 use your git client and clone libraries manually and then just point
 the location with `-libdir` parameter of the KickAss.
+
+Lets assume your project has following directory layout on the disk:
+
+    work
+      |--libs
+      +--project
+           |--SomeFile.asm
+           +--SomeOtherFile.asm
+           
+Then you go to the `libs` directory (`cd work/libs`), and then clone
+as many libraries from `c64lib` as you need:
+
+    git clone https://github.com/c64lib/common.git
+    git clone https://github.com/c64lib/chipset.git
+    git clone https://github.com/c64lib/text.git
+    git clone https://github.com/c64lib/copper64.git
+    
+This will checkout latest released version of the library (actually a 
+top of the `master` branch, which usually means the same). In result
+you will get something like this:
+
+    work
+      |--libs
+      |    +--common
+      |         +--lib
+      |              |--common.asm
+      |              |--invoke.asm
+      |              |--invoke-global.asm
+      |              |--math.asm
+      |              |--math-global.asm
+      |              |--mem.asm
+      |              +--mem-global.asm
+      |    +--chipset
+      |    +--text
+      |    +--copper64
+      +--project
+           |--SomeFile.asm
+           +--SomeOtherFile.asm
+
+If you then specify `-libdir` parameter to the KickAss appropriately,
+you'll be able to use the libs (asm files in `lib` directory) with
+simple `#import` directive, i.e.:
+
+    #import "common/lib/math-global.asm"
 
 [gradle]: https://gradle.org/
 [kickass]: http://theweb.dk/KickAssembler/Main.html
