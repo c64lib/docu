@@ -255,10 +255,58 @@ retroProject {
 <h3 id="when-gradle-is-not-used">When Gradle is not used</h3>
 <p>but you really want to start using it, you have to enable it first.</p>
 
-<h3 id="manual-clone-from-github">Manual clone from GitHub</h3>
+<h2 id="manual-clone-from-github">Manual clone from GitHub</h2>
 <p>If you don’t want to or cannot use <a href="gradle-plugin">Retro Assembler plugin</a>, you can
 use your git client and clone libraries manually and then just point
 the location with <code class="highlighter-rouge">-libdir</code> parameter of the KickAss.</p>
+
+<p>Lets assume your project has following directory layout on the disk:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>work
+  |--libs
+  +--project
+       |--SomeFile.asm
+       +--SomeOtherFile.asm
+</code></pre></div></div>
+
+<p>Then you go to the <code class="highlighter-rouge">libs</code> directory (<code class="highlighter-rouge">cd work/libs</code>), and then clone
+as many libraries from <code class="highlighter-rouge">c64lib</code> as you need:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/c64lib/common.git
+git clone https://github.com/c64lib/chipset.git
+git clone https://github.com/c64lib/text.git
+git clone https://github.com/c64lib/copper64.git
+</code></pre></div></div>
+
+<p>This will checkout latest released version of the library (actually a 
+top of the <code class="highlighter-rouge">master</code> branch, which usually means the same). In result
+you will get something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>work
+  |--libs
+  |    +--common
+  |         +--lib
+  |              |--common.asm
+  |              |--invoke.asm
+  |              |--invoke-global.asm
+  |              |--math.asm
+  |              |--math-global.asm
+  |              |--mem.asm
+  |              +--mem-global.asm
+  |    +--chipset
+  |    +--text
+  |    +--copper64
+  +--project
+       |--SomeFile.asm
+       +--SomeOtherFile.asm
+</code></pre></div></div>
+
+<p>If you then specify <code class="highlighter-rouge">-libdir</code> parameter to the KickAss appropriately,
+you’ll be able to use the libs (asm files in <code class="highlighter-rouge">lib</code> directory) with
+simple <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/math-global.asm"
+</code></pre></div></div>
 
 
 
@@ -273,7 +321,7 @@ the location with <code class="highlighter-rouge">-libdir</code> parameter of th
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-11-23 23:13</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-11-24 23:42</span></footer>
 
 
       <div id="gdpr" style="display: none;">
