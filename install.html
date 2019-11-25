@@ -74,6 +74,8 @@
 	    
 	  
 	    
+	      <a href="/docu/install" title="Installation guide">Install</a>
+	    
 	  
 	    
 	      <a href="/docu/news/" title="News">News</a>
@@ -148,6 +150,8 @@
 	      
 	    
 	      
+	        <a href="/docu/install" title="Installation guide">Install</a>
+	      
 	    
 	      
 	        <a href="/docu/news/" title="News">News</a>
@@ -198,7 +202,8 @@ to the <a href="https://gradle.org/">Gradle</a> build. It is an easy task due to
 <p>Well, when you are a happy user of Retro Assembler plugin, then you are
 even happier, because it’s extremely easy to add <code class="highlighter-rouge">c64lib</code> to your project.
 The <code class="highlighter-rouge">c64lib</code> is a <a href="https://github.com/c64lib">GitHub</a> project, so it can be added as GitHub
-dependency to your <code class="highlighter-rouge">gradle.build</code> file:</p>
+dependency to your <code class="highlighter-rouge">gradle.build</code> file. Put the following lines into
+your <code class="highlighter-rouge">retroProject</code> section of the build file:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libFromGitHub "c64lib/common", "0.1.0"
 libFromGitHub "c64lib/chipset", "0.1.0"
@@ -252,8 +257,64 @@ retroProject {
 }
 </code></pre></div></div>
 
+<p>In order to build your executable you just need to execute gradle:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradlew
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradlew build
+</code></pre></div></div>
+
+<p>In result C64 executables (a <code class="highlighter-rouge">prg</code> files) will be created.</p>
+
 <h3 id="when-gradle-is-not-used">When Gradle is not used</h3>
-<p>but you really want to start using it, you have to enable it first.</p>
+<p>but you really want to start using it, you have to enable it first.
+Following steps are requires as preconditions:</p>
+
+<ol>
+  <li>Download and install JDK 8 or higher from <a href="https://www.java.com/en/download/">Oracle</a>.</li>
+  <li>Download and install <a href="https://gradle.org/">Gradle</a>.</li>
+</ol>
+
+<p>Once it is done, you have to restart your console/terminal application
+and go to your project location. In your location you run Gradle to install
+a wrapper:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradle wrapper
+</code></pre></div></div>
+
+<p>then you add <code class="highlighter-rouge">gradle.build</code> file using following content (or similar):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
+    id "com.github.c64lib.retro-assembler" version "1.0.1"
+}
+
+repositories {
+    jcenter()
+}
+
+apply plugin: "com.github.c64lib.retro-assembler"
+
+retroProject {
+    dialect = "KickAssembler"
+    dialectVersion = "5.9"
+    libDirs = [".ra/deps/c64lib"]
+
+    libFromGitHub "c64lib/common", "0.1.0"
+    libFromGitHub "c64lib/chipset", "0.1.0"
+    libFromGitHub "c64lib/text", "0.1.0"
+    libFromGitHub "c64lib/copper64", "0.1.0"
+}
+</code></pre></div></div>
+
+<p>Of course, the set of used libraries (with <code class="highlighter-rouge">libFromGitHub</code> element) may
+vary as well as the version of Kick Assembler.</p>
+
+<p>And that’s it: from now on you are able to build your project using simple
+<code class="highlighter-rouge">gradlew</code> or <code class="highlighter-rouge">gradlew build</code> commands. It’s not even necessary to have
+Gradle installed. All you need is Java 8 or higher.</p>
 
 <h2 id="manual-clone-from-github">Manual clone from GitHub</h2>
 <p>If you don’t want to or cannot use <a href="gradle-plugin">Retro Assembler plugin</a>, you can
@@ -294,8 +355,11 @@ you will get something like this:</p>
   |              |--mem.asm
   |              +--mem-global.asm
   |    +--chipset
+  |         |--...
   |    +--text
+  |         |--...
   |    +--copper64
+  |         |--...
   +--project
        |--SomeFile.asm
        +--SomeOtherFile.asm
@@ -307,6 +371,51 @@ simple <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/math-global.asm"
 </code></pre></div></div>
+
+<p>As mentioned earlier, checkout from <code class="highlighter-rouge">master</code> branch ensures that last
+released version of library is used. If you want to change it and use
+concrete version from the past, after <code class="highlighter-rouge">git clone</code> you have to enter
+cloned directory (i.e. <code class="highlighter-rouge">cd common</code>) and checkout desired version:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout 1.0.0
+</code></pre></div></div>
+
+<p>(for version <code class="highlighter-rouge">1.0.0</code>).</p>
+
+<p>Assembling is then possible with manual invocation of Kick Assembler:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar c:\ka\KickAss.jar -libdir ../libs SomeFile.asm
+java -jar c:\ka\KickAss.jar -libdir ../libs SomeOtherFile.asm
+</code></pre></div></div>
+
+<h2 id="manual-copy">Manual copy</h2>
+<p>Least desired method of installation of <code class="highlighter-rouge">c64lib</code> is to download source
+code of given version and unzipping it into target directory. It is
+not a very convenient method but it does not require <a href="https://gradle.org/">Gradle</a>
+nor Git to be installed on your computer.</p>
+
+<p>For every library module you have to visit GitHub and open Releases
+tab:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://github.com/c64lib/common/releases/tag/0.1.0
+</code></pre></div></div>
+
+<p>Under assets you will see zipped content of the library. Download it
+and unzip into desired location, i.e. into <code class="highlighter-rouge">libs</code> directory. In result
+you end up with similar layout as with “Git clone” method (see above).</p>
+
+<p>You use exactly the same method to use library in your source code, i.e.:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke_global.asm"
+</code></pre></div></div>
+
+<p>and you invoke Kick Assembler using the same syntax:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar c:\ka\KickAss.jar -libdir ../libs SomeFile.asm
+</code></pre></div></div>
+
+<p>assuming, that your <code class="highlighter-rouge">libs</code> directory exists on the same level as your
+project directory.</p>
 
 
 
@@ -321,7 +430,7 @@ simple <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-11-24 23:42</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-11-25 22:50</span></footer>
 
 
       <div id="gdpr" style="display: none;">
