@@ -17,12 +17,16 @@ for 8-bit? The [c64lib] is here to help you.
 
 ## Pinned documents
 
+<div class="tiles">
 {% assign sorted_pages = site.pages | sort: "title" %}
 {% for page in sorted_pages %}
   {% if page.layout == "page" and page.pinned == true %}
-  <h3><a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl}}{% endif %}">{{ page.title }}</a></h3>
-  <p>{{ page.description | markdownify }}</p>
+  <div class="tile">
+  <a href="{% if site.baseurl == "/" %}{{ page.url }}{% else %}{{ page.url | prepend: site.baseurl}}{% endif %}">{{ page.title }}</a>
+  {{ page.description | markdownify }}
+  </div>
   {% endif %}
 {% endfor %}
+</div>
 
 [c64lib]: https://github.com/c64lib
