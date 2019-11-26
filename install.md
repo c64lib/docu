@@ -2,6 +2,7 @@
 layout: page
 title: Installation guide
 shortTitle: Install
+description: How to download, install and use the `c64lib`.
 nav: true
 order: 2
 pinned: true

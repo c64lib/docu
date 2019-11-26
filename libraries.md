@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Libraries
+description: What libraries are included in the `c64lib`.
 pinned: true
-description:
 ---
 The `c64lib` project consists of multiple libraries. Each library is hosted as separate GitHub repository 
 and have corresponding Travis-CI entry defined (see: [https://travis-ci.org/c64lib](https://travis-ci.org/c64lib)).
