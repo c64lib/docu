@@ -190,7 +190,19 @@
 
 			<article id="page">
   <h1>Building blocks</h1>
-  <h2 id="namespace">Namespace</h2>
+  <p>There are plenty of elements that can be declared within library and then
+reused. In most cases a dedicated Kick Assembler syntactic elements are used.
+These elements are declared source files (<code class="highlighter-rouge">asm</code>) which can be used by your
+programs by using <code class="highlighter-rouge">#import</code> directive.</p>
+
+<p>Most of the library source files have
+<code class="highlighter-rouge">#importonce</code> flag set - that is given library file can be imported in many
+places (in direct or indirect way) and only first import is effective. That also
+means that libraries can import themselves (and in fact they do!).</p>
+
+<p>This document describes all kinds of elements that are declared by <code class="highlighter-rouge">c64lib</code>.</p>
+
+<h2 id="namespace">Namespace</h2>
 <p>All elements of <code class="highlighter-rouge">c64lib</code> are defined within <code class="highlighter-rouge">c64lib</code> namespace, that is,
 they are visible only inside this namespace. This approach prevents possible
 name clashes between possible other libraries that could be used together
@@ -220,12 +232,37 @@ sta c64lib.SPRITE_0_X
 </code></pre></div></div>
 
 <h2 id="function">Function</h2>
-<p>Function is an element of Kick Assembler that is declared using
+<p>A function is an element of Kick Assembler that is declared using
 <code class="highlighter-rouge">.function</code> keyword. Functions does not assemble into any machine code -
 they are used by assembler to evaluate values that can be then used 
 in other functions, macros or to assembly a code.</p>
 
+<p>Example of function that negates (inverts all bits) of its argument:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.function neg(value) {
+  .return value ^ $FF
+}
+</code></pre></div></div>
+
+<p>Example of function that calculates packed value of memory register based 
+on its arguments:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*
+ * Params:
+ * video: location of video ram: 0..15
+ * bitmap: location of bitmap definition: 0..1
+ */
+.function getBitmapMemory(video, bitmap) {
+  .return bitmap&lt;&lt;3 | video&lt;&lt;4
+}
+</code></pre></div></div>
+
 <h2 id="macro">Macro</h2>
+<p>A macro is an element of Kick Assembler that is declared using <code class="highlighter-rouge">.macro</code>
+directive. Once used, macro is replaced with assembly code defining it.
+Macros can be parametrised (that is, they can take an argument, or even
+more arguments) - this parametrisation can affect the code being
+generated.</p>
 
 <h2 id="subroutine">Subroutine</h2>
 
@@ -246,7 +283,7 @@ in other functions, macros or to assembly a code.</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-11-27 22:25</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-04 23:01</span></footer>
 
 
       <div id="gdpr" style="display: none;">
