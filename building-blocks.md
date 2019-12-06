@@ -36,6 +36,7 @@ library:
     .label SPRITE_2_X           = VIC2 + $04 
     .label SPRITE_2_Y           = VIC2 + $05 
 
+Labels are always declared inside `c64lib` namespace.
 Labels can be reached outside `c64lib` namespace by prefixing their names with
 namespace name (labels are the only elements that can be accessed that way due
 to Kick Assembler limitations). For example: at any time it is legal to write:
@@ -67,6 +68,8 @@ on its arguments:
       .return bitmap<<3 | video<<4
     }
 
+Functions are always declared inside `c64lib` namespace.
+
 ## Macro
 A macro is an element of Kick Assembler that is declared using `.macro`
 directive. Once used, macro is replaced with assembly code defining it.
@@ -74,9 +77,33 @@ Macros can be parametrised (that is, they can take an argument, or even
 more arguments) - this parametrisation can affect the code being
 generated.
 
+It is noteworthy that macro is not an equivalent of subroutine, 
+even though it looks similar to one from syntactic point of view. 
+When macro is "called":
 
+    someFancyMacro(parameter1, parameter2)
+    
+it does not mean, that your code will jump into place where macro 
+`someFancyMacro` is declared, pass both parameters and return from that 
+place once execution is finished. Instead, an assembler will paste
+code declared inside macro substituting parameters with values provided
+as `parameter1` and `parameter2`.
+
+Under some circumstances you can use macros as subroutines. This may
+be fast, because there is no subroutine calling overhead. This will
+however consume a lot of memory (in sense of generated machine code)
+if not used wisely.
 
 ## Subroutine
+As subroutine we understand a piece of ML code that can be used by
+jumping there with `jsr` operation. A subroutine always ends with
+`rts` which means that at the end of execution program counter will
+be restored to the position right after original `jsr` operation
+and code execution will continue. In this sense a subroutine is
+an equivalent of procedure, function or method in high level
+programming languages.
+
+Kick Assembler as such does not provide any
 
 ## Macro-hosted subroutine
 
