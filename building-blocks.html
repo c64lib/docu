@@ -223,7 +223,8 @@ library:</p>
 .label SPRITE_2_Y           = VIC2 + $05 
 </code></pre></div></div>
 
-<p>Labels can be reached outside <code class="highlighter-rouge">c64lib</code> namespace by prefixing their names with
+<p>Labels are always declared inside <code class="highlighter-rouge">c64lib</code> namespace.
+Labels can be reached outside <code class="highlighter-rouge">c64lib</code> namespace by prefixing their names with
 namespace name (labels are the only elements that can be accessed that way due
 to Kick Assembler limitations). For example: at any time it is legal to write:</p>
 
@@ -257,6 +258,8 @@ on its arguments:</p>
 }
 </code></pre></div></div>
 
+<p>Functions are always declared inside <code class="highlighter-rouge">c64lib</code> namespace.</p>
+
 <h2 id="macro">Macro</h2>
 <p>A macro is an element of Kick Assembler that is declared using <code class="highlighter-rouge">.macro</code>
 directive. Once used, macro is replaced with assembly code defining it.
@@ -264,7 +267,34 @@ Macros can be parametrised (that is, they can take an argument, or even
 more arguments) - this parametrisation can affect the code being
 generated.</p>
 
+<p>It is noteworthy that macro is not an equivalent of subroutine, 
+even though it looks similar to one from syntactic point of view. 
+When macro is “called”:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>someFancyMacro(parameter1, parameter2)
+</code></pre></div></div>
+
+<p>it does not mean, that your code will jump into place where macro 
+<code class="highlighter-rouge">someFancyMacro</code> is declared, pass both parameters and return from that 
+place once execution is finished. Instead, an assembler will paste
+code declared inside macro substituting parameters with values provided
+as <code class="highlighter-rouge">parameter1</code> and <code class="highlighter-rouge">parameter2</code>.</p>
+
+<p>Under some circumstances you can use macros as subroutines. This may
+be fast, because there is no subroutine calling overhead. This will
+however consume a lot of memory (in sense of generated machine code)
+if not used wisely.</p>
+
 <h2 id="subroutine">Subroutine</h2>
+<p>As subroutine we understand a piece of ML code that can be used by
+jumping there with <code class="highlighter-rouge">jsr</code> operation. A subroutine always ends with
+<code class="highlighter-rouge">rts</code> which means that at the end of execution program counter will
+be restored to the position right after original <code class="highlighter-rouge">jsr</code> operation
+and code execution will continue. In this sense a subroutine is
+an equivalent of procedure, function or method in high level
+programming languages.</p>
+
+<p>Kick Assembler as such does not provide any</p>
 
 <h2 id="macro-hosted-subroutine">Macro-hosted subroutine</h2>
 
@@ -283,7 +313,7 @@ generated.</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-04 23:01</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-06 23:16</span></footer>
 
 
       <div id="gdpr" style="display: none;">
