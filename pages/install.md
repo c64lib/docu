@@ -219,9 +219,14 @@ and you invoke Kick Assembler using the same syntax:
 assuming, that your `libs` directory exists on the same level as your
 project directory.
 
+## Further reading
+- [Building blocks of c64lib][building-blocks]
+- [What libraries are available within c64lib][libraries]
+
 [gradle]: https://gradle.org/
 [kickass]: http://theweb.dk/KickAssembler/Main.html
 [ra]: gradle-plugin
 [c64lib]: https://github.com/c64lib
 [libraries]: libraries
 [java]: https://www.java.com/en/download/
+[building-blocks]: building-blocks
