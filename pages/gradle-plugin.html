@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Libraries</title>
-  <meta name="description" content="What libraries are included in the `c64lib`.">
+	<title>Gradle Retro Assembler plugin</title>
+  <meta name="description" content="Documentation portal for c64lib">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/docu/css/main.css">
@@ -33,7 +33,7 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/docu/img/favicon.png">
 
 </head>
 
@@ -72,11 +72,11 @@
 	    
 	  
 	    
-	      <a href="/docu/about" title="About">About</a>
+	      <a href="/docu/pages/about" title="About">About</a>
 	    
 	  
 	    
-	      <a href="/docu/install" title="Installation guide">Install</a>
+	      <a href="/docu/pages/install" title="Installation guide">Install</a>
 	    
 	  
 	    
@@ -84,7 +84,7 @@
 	    
 	  
 	    
-	      <a href="/docu/contribute" title="Contribute">Contribute</a>
+	      <a href="/docu/pages/contribute" title="Contribute">Contribute</a>
 	    
 	  
 	    
@@ -150,11 +150,11 @@
 	      
 	    
 	      
-	        <a href="/docu/about" title="About">About</a>
+	        <a href="/docu/pages/about" title="About">About</a>
 	      
 	    
 	      
-	        <a href="/docu/install" title="Installation guide">Install</a>
+	        <a href="/docu/pages/install" title="Installation guide">Install</a>
 	      
 	    
 	      
@@ -162,7 +162,7 @@
 	      
 	    
 	      
-	        <a href="/docu/contribute" title="Contribute">Contribute</a>
+	        <a href="/docu/pages/contribute" title="Contribute">Contribute</a>
 	      
 	    
 	      
@@ -189,32 +189,8 @@
 		<main>
 
 			<article id="page">
-  <h1>Libraries</h1>
-  <p>The <code class="highlighter-rouge">c64lib</code> project consists of multiple libraries. Each library is hosted as separate GitHub repository 
-and have corresponding Travis-CI entry defined (see: <a href="https://travis-ci.org/c64lib">https://travis-ci.org/c64lib</a>).</p>
-
-<p>There are following core libraries:</p>
-<ul>
-  <li><a href="https://github.com/c64lib/common">common</a> - the one that hosts some commonly used functions, macros and subroutines; no other <code class="highlighter-rouge">c64lib</code> library can work without it. This code is intended to be platform (C64) independent, it complies to typical MOS 6502 assembler syntax (except it is written in KickAss, which is C64 specific at the moment).</li>
-  <li><a href="https://github.com/c64lib/chipset">chipset</a> - the one that hosts code that is platform specific and is dedicated to handle typical C64 chipset such as VIC-II, SID, CIA as well as typical C64 memory layout.</li>
-</ul>
-
-<p>There are following auxiliary libraries:</p>
-<ul>
-  <li><a href="https://github.com/c64lib/text">text</a> - the one that handles displaying text in text mode of Commodore 64 / VIC-II.</li>
-</ul>
-
-<p>There are following application libraries:</p>
-<ul>
-  <li><a href="https://github.com/c64lib/copper64">copper64</a> - utility library that makes raster interrupt programming on VIC-II pleasant and easy.</li>
-</ul>
-
-<h2 id="library-dependencies">Library dependencies</h2>
-<p>The following diagram describes dependencies between internal libraries of <code class="highlighter-rouge">c64lib</code> project. 
-There is also an excellent <code class="highlighter-rouge">64spec</code> testing library used and shown as external reference.</p>
-
-<p><img src="img/Library%20dependencies.png" alt="Image dependencies" /></p>
-
+  <h1>Gradle Retro Assembler plugin</h1>
+  
 
 
 </article>
@@ -228,7 +204,7 @@ There is also an excellent <code class="highlighter-rouge">64spec</code> testing
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-17 21:30</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-17 21:39</span></footer>
 
 
       <div id="gdpr" style="display: none;">
