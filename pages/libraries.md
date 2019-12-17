@@ -21,5 +21,5 @@ There are following application libraries:
 The following diagram describes dependencies between internal libraries of `c64lib` project. 
 There is also an excellent `64spec` testing library used and shown as external reference.
 
-![Image dependencies](img/Library%20dependencies.png)
+![Image dependencies](../img/Library%20dependencies.png)
 

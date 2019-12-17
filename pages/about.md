@@ -18,4 +18,4 @@ being status from both CI (Travis-CI and CircleCI) are presented below.
 
 ***
 
-![c64lib](img/c64lib-avatar.jpg)
+![c64lib](../img/c64lib-avatar.jpg)
