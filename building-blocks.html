@@ -195,10 +195,10 @@ reused. In most cases a dedicated Kick Assembler syntactic elements are used.
 These elements are declared source files (<code class="highlighter-rouge">asm</code>) which can be used by your
 programs by using <code class="highlighter-rouge">#import</code> directive.</p>
 
-<p>Most of the library source files have
-<code class="highlighter-rouge">#importonce</code> flag set - that is given library file can be imported in many
-places (in direct or indirect way) and only first import is effective. That also
-means that libraries can import themselves (and in fact they do!).</p>
+<p>Most of the library source files have <code class="highlighter-rouge">#importonce</code> flag set - that is given
+library file can be imported in many places (in direct or indirect way) and
+only first import is effective. That also means that libraries can import
+themselves (and in fact they do!).</p>
 
 <p>This document describes all kinds of elements that are declared by <code class="highlighter-rouge">c64lib</code>.</p>
 
@@ -258,7 +258,8 @@ on its arguments:</p>
 }
 </code></pre></div></div>
 
-<p>Functions are always declared inside <code class="highlighter-rouge">c64lib</code> namespace.</p>
+<p>Functions are always declared inside <code class="highlighter-rouge">c64lib</code> namespace. Functions are
+declared in files <code class="highlighter-rouge">.asm</code> files located under <code class="highlighter-rouge">lib</code> directory.</p>
 
 <h2 id="macro">Macro</h2>
 <p>A macro is an element of Kick Assembler that is declared using <code class="highlighter-rouge">.macro</code>
@@ -280,25 +281,141 @@ place once execution is finished. Instead, an assembler will paste
 code declared inside macro substituting parameters with values provided
 as <code class="highlighter-rouge">parameter1</code> and <code class="highlighter-rouge">parameter2</code>.</p>
 
-<p>Under some circumstances you can use macros as subroutines. This may
-be fast, because there is no subroutine calling overhead. This will
-however consume a lot of memory (in sense of generated machine code)
-if not used wisely.</p>
+<p>Under some circumstances you can use macros as subroutines. This may be fast, 
+because there is no subroutine calling overhead. This will however consume a
+lot of memory (in sense of generated machine code) if not used wisely.</p>
+
+<p>Macros are declared in <code class="highlighter-rouge">.asm</code> files located under <code class="highlighter-rouge">lib</code> directory.</p>
 
 <h2 id="subroutine">Subroutine</h2>
-<p>As subroutine we understand a piece of ML code that can be used by
-jumping there with <code class="highlighter-rouge">jsr</code> operation. A subroutine always ends with
-<code class="highlighter-rouge">rts</code> which means that at the end of execution program counter will
-be restored to the position right after original <code class="highlighter-rouge">jsr</code> operation
-and code execution will continue. In this sense a subroutine is
-an equivalent of procedure, function or method in high level
-programming languages.</p>
+<p>As subroutine we understand a piece of ML code that can be used by jumping
+there with <code class="highlighter-rouge">jsr</code> operation. A subroutine always ends with <code class="highlighter-rouge">rts</code> which means
+that at the end of execution program counter will be restored to the position
+right after original <code class="highlighter-rouge">jsr</code> operation and code execution will continue. In
+this sense a subroutine is an equivalent of procedure, function or method in
+high level programming languages.</p>
 
-<p>Kick Assembler as such does not provide any</p>
+<p>Kick Assembler as such does not provide any special means to create
+subroutines as it is just a macro assembler. With <code class="highlighter-rouge">c64lib</code> we basically share
+subroutine code just by writing piece of asm code and place it in separate
+source files.</p>
+
+<p>Subroutines are declared in <code class="highlighter-rouge">.asm</code> files located under <code class="highlighter-rouge">lib/dir</code> subdirectory.
+Each subroutine consists of appropriate <code class="highlighter-rouge">rts</code> operation so that it should always
+be accessed with corresponding <code class="highlighter-rouge">jsr</code> operation. If soubroutine consumes input
+parameters, they should be set accordingly before <code class="highlighter-rouge">jsr</code> is executed.
+Depending on the parameter passing method it should be either register setup
+(that is A, X or Y), memory location setup or pushing to the stack. For stack
+method there is a convenience library <a href="https://github.com/c64lib/common/blob/master/lib/invoke.asm">invoke</a> available.</p>
+
+<p>A subroutine code should be imported in place where it needs to be 
+located - we don’t do it at the top of the source file but rather we use 
+<code class="highlighter-rouge">#import</code> directive exactly in place where we want to have our subroutine.</p>
+
+<p>Lets consider <a href="https://github.com/c64lib/common/blob/master/lib/sub/copy-large-mem-forward.asm">copyLargeMemForward</a> subroutine as an example. We have to label
+a place in memory where the subroutine will start and then import the
+subroutine itself:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>copyMemFwd:
+    #import "common/lib/sub/copyLargeMemForward.asm"
+</code></pre></div></div>
+
+<p>The subroutine takes three parameters using stack passing method:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Stack WORD - source address
+Stack WORD - target address
+Stack WORD - size
+</code></pre></div></div>
+
+<p>So, before calling subroutine, you have to push 6 bytes to the stack. The
+easiest way to do it is to use <a href="https://github.com/c64lib/common/blob/master/lib/invoke.asm">invoke</a> library:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke-global.asm"
+</code></pre></div></div>
+
+<p>and then:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c64lib_pushParamW(sourceAddress)
+c64lib_pushParamW(destinationAddress)
+c64lib_pushParamW(amountOfBytesToCopy)
+jsr copyMemFwd
+</code></pre></div></div>
+
+<p>In result a subroutine will be called and <code class="highlighter-rouge">amountOfBytesToCopy</code> bytes will be
+copied from <code class="highlighter-rouge">sourceAddress</code> location to the <code class="highlighter-rouge">destinationAddress</code> location.</p>
 
 <h2 id="macro-hosted-subroutine">Macro-hosted subroutine</h2>
+<p>Some subroutines use this convenient method of distribution. Instead of being 
+declared in separate source file, they are declared where macros and functions
+are declared - in library source files itself.</p>
+
+<p>Macro-hosted subroutines are used when further parametrisation is needed before
+subroutine is ready to use. Usually there are some variants that can be turned
+on or off (in such case such macro can be called multiple times thus generating
+multiple versions of subroutine). Sometimes subroutine requires some zero-page
+addresses that we don’t want to hardcode in the library - it would be then
+up to the user to parametrise subroutine with addresses of choice.</p>
+
+<p>Example - a scroll subroutine</p>
+
+<p>Let’s consider <a href="https://github.com/c64lib/text/blob/develop/lib/scroll1x1.asm">scroll1x1</a>:</p>
+
+<p>This subroutine requires three parameters being passed via stack but also needs
+two consecutive bytes on zero page for functioning (indirect addressing is
+used). Let’s assume we will use address 4 and 5 for this purpose.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "text/lib/scroll1x1.asm"
+#import "common/lib/invoke.asm"
+
+...
+
+.namespace c64lib {
+    pushParamW(screenAddress)
+    pushParamW(textAddress)
+    pushParamWInd(scrollPtr)
+}
+jsr scroll
+
+...
+
+scroll: .namespace c64lib { scroll1x1(4) }
+</code></pre></div></div>
+
+<p>So, the scroll subroutine is configured for address 4 (and 5), and installed
+under address denoted by <code class="highlighter-rouge">scroll</code> label. It can be then normally called with
+<code class="highlighter-rouge">jsr scroll</code>. Before calling input parameters need to be pushed to the stack.
+It is done via <code class="highlighter-rouge">pushParamW</code> macros (for address values) and <code class="highlighter-rouge">pushParamWInd</code> (to
+extract value from memory location pointed by parameter).</p>
 
 <h2 id="global-importables">Global importables</h2>
+<p>Macros and functions from <code class="highlighter-rouge">c64lib</code> are declared within <code class="highlighter-rouge">c64lib</code> namespace. As
+already mentioned this is to avoid name clashes when using libraries from
+different sources. Due to KickAssembler limitations it is not possible to
+access macro or function from within namespace using “dot” notation. In order
+to allow accessing elements from outside <code class="highlighter-rouge">c64lib</code> namespace, each library file
+has <code class="highlighter-rouge">_global</code> counterpart that can be alternatively imported. In such case
+all elements such as functions and macros will be available straight from
+root namespace by using <code class="highlighter-rouge">c64lib_</code> name prefix.</p>
+
+<p>Example - you can use elements from <a href="https://github.com/c64lib/common/blob/master/lib/invoke.asm">invoke</a> in traditional way:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke.asm"
+
+.namespace c64lib {
+    pushParamW(sourceAddress)
+    pushParamW(destinationAddress)
+    pushParamW(amountOfBytesToCopy)
+}
+</code></pre></div></div>
+
+<p>or by using global importable:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke-global.asm"
+
+c64lib_pushParamW(sourceAddress)
+c64lib_pushParamW(destinationAddress)
+c64lib_pushParamW(amountOfBytesToCopy)
+</code></pre></div></div>
 
 
 
@@ -313,7 +430,7 @@ programming languages.</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-06 23:16</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-17 21:30</span></footer>
 
 
       <div id="gdpr" style="display: none;">
