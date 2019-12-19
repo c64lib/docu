@@ -56,7 +56,7 @@ Here I use several macros, that are defined in [chipset library](https://github.
 
 Once assembled and launched, this code produces following picture:
 
-![Simple raster]({{ "/cbm/img/copper64/simple-raster-jitter.png" | absolute_url }})
+![Simple raster]({{ "/news/img/copper64/simple-raster-jitter.png" | absolute_url }})
 
 One of VIC-II shortcomings is the fact, that you can specify only single raster line and single IRQ handler at the moment. That is, to fire several different raster handlers at certain screen positions you have to dynamically reprogram VIC-II at the end of one handler to register another handler. And so on.
 
@@ -71,7 +71,7 @@ I wrote this little library to make our lives easier. It is available on [github
 
 How about getting such image:
 
-![Colorful raster bars]({{ "/cbm/img/copper64/color-raster-bars.png" | absolute_url }})
+![Colorful raster bars]({{ "/news/img/copper64/color-raster-bars.png" | absolute_url }})
 
 
 with following code?:

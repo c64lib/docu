@@ -15,14 +15,6 @@ permalink: /:title
 paginate: 8
 paginate_path: /news/page:num/
 
-# Collections
-collections:
-  libs:
-    output: true
-    sort_by: weight
-  libs_common:
-    output: false
-
 # Default values
 defaults:
   -

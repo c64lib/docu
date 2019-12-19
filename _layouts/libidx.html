@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article id="page">
+  <h1>{%if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
+  {{ content }}
+
+  <h2>Content</h2>
+  {% assign pages_by_title = site.pages | sort: "title" %}
+  {% for pg in pages_by_title %}
+  {% assign prefix_size = page.prefix | size %}
+  {% assign prefix = pg.path | slice: 0, prefix_size %}
+  {% if prefix == page.prefix and pg.layout != "libidx" %}
+    <a href="{{ site.baseurl }}{{ pg.url }}" class="page-reference">
+      <h3>{{ pg.title }}</h3>
+      <p class="description">{{ pg.description }}</p>
+      <p class="files">Source files: <code>{{ pg.files | join: ", " }}</code></p>
+      <p class="content">{{ pg.content | strip_html | truncatewords:50 }}</p>
+    </a>
+  {% endif %}
+  {% endfor %}
+
+</article>
