@@ -1,6 +1,11 @@
 ---
 layout: page
-title: Common
+title: common
 description: ipsum lorem
-files: [common.asm]
+files: [lib/common.asm]
+subroutines: []
+backurl: true
 ---
+<!--more-->
+
+{% include lib-module-installation-note.md %}

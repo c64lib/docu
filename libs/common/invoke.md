@@ -1,6 +1,11 @@
 ---
 layout: page
-title: Invoke
+title: invoke
 description: ipsum lorem
-files: [invoke.asm, invoke-global.asm]
+files: [lib/invoke.asm, lib/invoke-global.asm]
+subroutines: []
+backurl: true
 ---
+<!--more-->
+
+{% include lib-module-installation-note.md %}

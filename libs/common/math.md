@@ -1,6 +1,11 @@
 ---
 layout: page
-title: Math
+title: math
 description: ipsum lorem
-files: [math.asm, math-global.asm]
+files: [lib/math.asm, lib/math-global.asm]
+subroutines: []
+backurl: true
 ---
+<!--more-->
+
+{% include lib-module-installation-note.md %}
