@@ -23,7 +23,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Invoke</title>
+	<title>invoke</title>
   <meta name="description" content="ipsum lorem">
 
 	<!-- CSS & fonts -->
@@ -210,9 +210,43 @@
 
 			<article id="page">
   
-
-  <h1>Invoke</h1>
   
+    
+    
+    <a href="/docu/libs/common">&laquo; Back</a>
+  
+
+
+  <h1>invoke</h1>
+  <!--more-->
+
+<h2 id="installation-and-usage">Installation and usage</h2>
+<p>Follow generic instruction for <code class="highlighter-rouge">c64lib</code> 
+<a href="/docu/pages/install">installation</a> 
+in order to bring “invoke” into your Kick Assembler project.
+Remember to add a directory that contains cloned invoke repository
+to your <code class="highlighter-rouge">libdir</code> when executing Kick Assembler.</p>
+
+<p>The invoke module consists of following files:</p>
+<ul>
+  <li><code class="highlighter-rouge">lib/invoke-global.asm</code></li>
+  <li><code class="highlighter-rouge">lib/invoke.asm</code></li>
+</ul>
+
+<p>All files located directly in <code class="highlighter-rouge">lib</code> directory can be imported to your source
+code using <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/invoke.asm"
+</code></pre></div></div>
+
+<p>All library files located directly under <code class="highlighter-rouge">lib</code> directory has <code class="highlighter-rouge">#importonce</code>
+declared which means they can be safely imported multiple times - only first
+import is effective.</p>
+
+<p>Library files with <code class="highlighter-rouge">-global.asm</code> suffix contains globalized elements that can
+be directly accessed from root namespace. All names of these elements (except
+labels) are prefixed with <code class="highlighter-rouge">c64lib_</code> prefix.</p>
+
 
 
 </article>
@@ -226,7 +260,7 @@
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-20 11:38</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-20 13:44</span></footer>
 
 
       <div id="gdpr" style="display: none;">
