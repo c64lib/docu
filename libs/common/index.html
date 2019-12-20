@@ -209,6 +209,8 @@
 		<main>
 
 			<article id="page">
+  
+
   <h1>Common library</h1>
   <p>This is a core utility library for <code class="highlighter-rouge">c64lib</code>. It is written in KickAssembler
 but in general contains code that is portable to other architectures based on
@@ -321,9 +323,14 @@ MOS 6502 (VIC 20, C128, 8-bit Atari etc).</p>
   
     <a href="/docu/libs/common/mem" class="page-reference">
       <h3>Mem</h3>
-      <p class="description">ipsum lorem</p>
+      <p class="description">Various memory related operations</p>
       <p class="files">Source files: <code>mem.asm, mem-global.asm</code></p>
-      <p class="content"></p>
+      <p class="content">This module contains various memory related macros and subroutines that cover
+following scenarios: copying memory blocks, rotating memory blocks, filling
+memory blocks with given value.
+
+{% include lib-module-installation-note.md %}
+</p>
     </a>
   
   
@@ -347,7 +354,7 @@ MOS 6502 (VIC 20, C128, 8-bit Atari etc).</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-19 16:58</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-20 11:38</span></footer>
 
 
       <div id="gdpr" style="display: none;">
