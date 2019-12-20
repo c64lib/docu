@@ -2,6 +2,7 @@
 layout: default
 ---
 <article id="page">
+  {% include back-nav.html %}
   <h1>{%if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
   {{ content }}
 

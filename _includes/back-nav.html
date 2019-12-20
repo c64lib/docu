@@ -1,0 +1,7 @@
+{% if page.backurl %}
+  {% assign url_section_count = page.url | split: "/" | size | minus: 2 %}
+    {% if url_section_count >= 0 %}
+    {% assign back_url = page.url | replace: "/", " " | truncatewords: url_section_count, "" | replace: " ", "/" %}
+    <a href="{{ site.baseurl }}/{{ back_url }}">&laquo; Back</a>
+  {% endif %}
+{% endif %}
