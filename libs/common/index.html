@@ -227,7 +227,16 @@ but in general contains code that is portable to other architectures based on
 MOS 6502 (VIC 20, C128, 8-bit Atari etc).<!--more--></p>
 
 <h2 id="installation">Installation</h2>
-<p>The common library is deployed on <a href="https://github.com/c64lib/common">GitHub</a>.</p>
+<p>Follow generic instruction for <code class="highlighter-rouge">c64lib</code> 
+<a href="/docu/pages/install">installation</a> 
+in order to bring “Common library” into your Kick Assembler project. Simply
+clone the repository into directory of choice:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/c64lib/common.git
+</code></pre></div></div>
+
+<p>Remember to add a directory that contains cloned common repository
+to your <code class="highlighter-rouge">libdir</code> when executing Kick Assembler.</p>
 
 
 
@@ -309,14 +318,6 @@ MOS 6502 (VIC 20, C128, 8-bit Atari etc).<!--more--></p>
     
     
     
-      <a href="/docu/libs/common/common" class="page-reference">
-        <h3>common</h3>
-        <p class="description">ipsum lorem</p>
-        <p class="files">Source files: <code>lib/common.asm</code></p>
-        <p class="content">
-</p>
-      </a>
-    
   
     
     
@@ -335,9 +336,10 @@ MOS 6502 (VIC 20, C128, 8-bit Atari etc).<!--more--></p>
     
       <a href="/docu/libs/common/math" class="page-reference">
         <h3>math</h3>
-        <p class="description">ipsum lorem</p>
+        <p class="description">Basic arithmetic operations.</p>
         <p class="files">Source files: <code>lib/math.asm, lib/math-global.asm</code></p>
-        <p class="content">
+        <p class="content"><p>Convenience macros for 16 bit arithmetic operations such as adding, subtraction,
+increment, decrement.</p>
 </p>
       </a>
     
@@ -368,7 +370,7 @@ memory blocks with given value.</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-20 13:54</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-21 23:28</span></footer>
 
 
       <div id="gdpr" style="display: none;">

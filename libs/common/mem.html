@@ -226,13 +226,7 @@
 following scenarios: copying memory blocks, rotating memory blocks, filling
 memory blocks with given value.<!--more--></p>
 
-<h2 id="installation-and-usage">Installation and usage</h2>
-<p>Follow generic instruction for <code class="highlighter-rouge">c64lib</code> 
-<a href="/docu/pages/install">installation</a> 
-in order to bring “mem” into your Kick Assembler project.
-Remember to add a directory that contains cloned mem repository
-to your <code class="highlighter-rouge">libdir</code> when executing Kick Assembler.</p>
-
+<h2 id="usage">Usage</h2>
 <p>The mem module consists of following files:</p>
 <ul>
   <li><code class="highlighter-rouge">lib/mem-global.asm</code></li>
@@ -250,7 +244,7 @@ to your <code class="highlighter-rouge">libdir</code> when executing Kick Assemb
 <p>All files located directly in <code class="highlighter-rouge">lib</code> directory can be imported to your source
 code using <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/mem-global.asm"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "common/lib/mem.asm"
 </code></pre></div></div>
 
 <p>All library files located directly under <code class="highlighter-rouge">lib</code> directory has <code class="highlighter-rouge">#importonce</code>
@@ -279,7 +273,7 @@ where they are imported.</p>
 	  </div>
 
 	    <!-- Footer -->
-	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-20 13:54</span></footer>
+	    <footer><span>&#169; 2018-2019 <code>c64lib</code> &#10540; last update: 2019-12-21 23:28</span></footer>
 
 
       <div id="gdpr" style="display: none;">
