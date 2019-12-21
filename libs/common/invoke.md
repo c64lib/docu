@@ -8,4 +8,4 @@ backurl: true
 ---
 <!--more-->
 
-{% include lib-module-installation-note.md %}
+{% include lib-module-usage-note.md %}

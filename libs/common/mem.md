@@ -16,4 +16,4 @@ This module contains various memory related macros and subroutines that cover
 following scenarios: copying memory blocks, rotating memory blocks, filling
 memory blocks with given value.<!--more-->
 
-{% include lib-module-installation-note.md %}
+{% include lib-module-usage-note.md %}

@@ -5,7 +5,8 @@ description: ipsum lorem
 files: [lib/common.asm]
 subroutines: []
 backurl: true
+hidden: true
 ---
 <!--more-->
 
-{% include lib-module-installation-note.md %}
+{% include lib-module-usage-note.md %}

@@ -4,12 +4,12 @@ title: c64lib libraries
 ---
 {% assign lib_pages = site.pages | sort: "title" %}
 {% for pg in lib_pages %}
-    {% if pg.layout == 'libidx' %}
+    {% unless pg.layout != 'libidx' or pg.hidden %}
       <a href="{{ site.baseurl }}{{ pg.url }}" class="page-reference">
         <h3>{{ pg.title }}</h3>
         <p class="content">
             {{ pg.content | split: "<!--more-->" | first }}
         </p>
       </a>
-    {% endif %}
+    {% endunless %}
 {% endfor %}

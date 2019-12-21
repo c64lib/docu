@@ -11,14 +11,14 @@ layout: default
   {% for pg in pages_by_title %}
     {% assign prefix_size = page.prefix | size %}
     {% assign prefix = pg.path | slice: 0, prefix_size %}
-    {% if prefix == page.prefix and pg.layout != "libidx" %}
+    {% unless pg.hidden or prefix != page.prefix or pg.layout == "libidx" %}
       <a href="{{ site.baseurl }}{{ pg.url }}" class="page-reference">
         <h3>{{ pg.title }}</h3>
         <p class="description">{{ pg.description }}</p>
         <p class="files">Source files: <code>{{ pg.files | join: ", " }}</code></p>
         <p class="content">{{ pg.content | split: "<!--more-->" | first | markdownify }}</p>
       </a>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 
 </article>
