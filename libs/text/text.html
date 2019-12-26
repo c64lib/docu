@@ -23,8 +23,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>c64lib libraries</title>
-  <meta name="description" content="Documentation portal for c64lib">
+	<title>text</title>
+  <meta name="description" content="ipsum lorem">
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/docu/css/main.css">
@@ -226,80 +226,47 @@
 
 			<article id="page">
   
-
-  <h1>c64lib libraries</h1>
+  
+    
+    
+    <a href="/docu/libs/text">&laquo; Back</a>
   
 
-    
 
-    
+  <h1>text</h1>
+  <!--more-->
 
-    
+<h2 id="usage">Usage</h2>
+<p>The text module consists of following files:</p>
+<ul>
+  <li><code class="highlighter-rouge">lib/text-global.asm</code></li>
+  <li><code class="highlighter-rouge">lib/text.asm</code></li>
+</ul>
 
-    
+<p>Additionally, the text module consists of following subroutines:</p>
+<ul>
+  <li><code class="highlighter-rouge">lib/sub/out-hex.asm</code></li>
+  <li><code class="highlighter-rouge">lib/sub/out-text.asm</code></li>
+</ul>
 
-    
+<p>All files located directly in <code class="highlighter-rouge">lib</code> directory can be imported to your source
+code using <code class="highlighter-rouge">#import</code> directive, i.e.:</p>
 
-    
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "text/lib/text-global.asm"
+</code></pre></div></div>
 
-    
+<p>All library files located directly under <code class="highlighter-rouge">lib</code> directory has <code class="highlighter-rouge">#importonce</code>
+declared which means they can be safely imported multiple times - only first
+import is effective.</p>
 
-    
+<p>Library files with <code class="highlighter-rouge">-global.asm</code> suffix contains globalized elements that can
+be directly accessed from root namespace. All names of these elements (except
+labels) are prefixed with <code class="highlighter-rouge">c64lib_</code> prefix.</p>
 
-    
-
-    
-
-    
-      <a href="/docu/libs/common/" class="page-reference">
-        <h3>Common library</h3>
-        <p class="content">
-            This is a core utility library for `c64lib`. It is written in KickAssembler
-but in general contains code that is portable to other architectures based on
-MOS 6502 (VIC 20, C128, 8-bit Atari etc).
-        </p>
-      </a>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-      <a href="/docu/libs/text/" class="page-reference">
-        <h3>Text library</h3>
-        <p class="content">
-            This utility library is a part of `c64lib` that handles text modes of
-Commodore 64 microcomputer. You will find subroutines for outing text messages
-to the screen, fill screen data and color RAM with patterns and various
-scrolling routines handy for text scrollers as well as for whole screen 
-scrollers. This is intended to be a core library for implementing backgrounds
-in games.
-        </p>
-      </a>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+<p>All library files located under <code class="highlighter-rouge">lib\sub</code> directory are subroutines and should
+be imported only once (it’s up to the programmer to ensure this) - they are
+not macros so corresponding assembly code will be embedded right in the place
+where they are imported.</p>
 
 
 
