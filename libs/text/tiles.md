@@ -1,7 +1,7 @@
 ---
 layout: page
 title: tiles
-description: ipsum lorem
+description: Tile-based scrollable backgrounds
 files: 
     - lib/tiles-2x2.asm
     - lib/tiles-color-ram-shift.asm
@@ -9,7 +9,7 @@ files:
     - lib/tiles-screen-shift.asm 
 subroutines: []
 backurl: true
-hidden: true
+hidden: false
 ---
 <!--more-->
 
