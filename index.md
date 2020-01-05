@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-In software world we developers ofter share with others. We pack our code
+In software world we, developers, often share with others. We pack our code
 into libraries and allow other coders to use them. This increases our
 productivity as we can focus now on real applications instead of doing
 core things again and again. This is a standard approach for 2019. It
