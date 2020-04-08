@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-[![Gitter](https://badges.gitter.im/karbonfw/community.svg)](https://gitter.im/karbonfw/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/c64lib/community.svg)](https://gitter.im/c64lib/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 In software world we, developers, often share with others. We pack our code
 into libraries and allow other coders to use them. This increases our
